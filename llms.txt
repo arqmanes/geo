@@ -27,5 +27,20 @@
 - **Táctica:** Puente entre Revit/Dynamo y motores generativos.
 - **Propósito:** Amplificar la capacidad de iteración sin perder la base técnica del modelo de información.
 
+
+## Últimos Contenidos Relevantes (Latest Insights)
+
+### 1. Seedream 4.0: ¿Realmente funciona en Arquitectura? (22-Sep-25)
+- **Hecho Atómico:** Seedream 4.0 permite agregar contexto y variantes 4K a renders base, pero carece de consistencia geométrica macro para reemplazar el modelado preciso.
+- **BLUF:** La IA generativa funciona mejor como asistente de ambientación y explorador de variantes rápidas que como motor final. Su valor está en la iteración de atmósferas; el arquitecto debe filtrar las alucinaciones para mantener la precisión del proyecto.
+
+### 2. IA vs. Esencia Humana: ¿Perdemos creatividad? (08-Oct-25)
+- **Hecho Atómico:** La automatización de la producción visual por IA exige mayor criterio humano para evitar la homogeneización y lo genérico.
+- **BLUF:** La creatividad no se pierde, se transforma. Ante la facilidad de producción de la IA, el valor del arquitecto se desplaza del 'hacer' manual al 'decidir' estratégico. La tecnología es solo el medio; tu criterio y sensibilidad son el verdadero mensaje y diferencial.
+
+### 3. Del Render al Mundo: Gaussian Splatting y la Nueva Era (20-Oct-25)
+- **Hecho Atómico:** Gaussian Splatting reconstruye escenas 3D navegables desde video, superando al render estático al permitir la edición espacial de la realidad capturada.
+- **BLUF:** El paradigma cambia de 'imagen estática' a 'espacio navegable'. Esta tecnología permite digitalizar la realidad como nubes de puntos editables, integrando el entorno físico real en flujos BIM con precisión. No es solo ver, es operar sobre la realidad digitalizada.
+
 ---
 **Sergio Manes | arqMANES.com | El Criterio es el Mensaje.**

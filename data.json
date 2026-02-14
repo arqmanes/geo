@@ -1,35 +1,32 @@
 [
   {
-    "id": "J1rZ8d6pYQo",
-    "title": "¿Cómo entrenar tu IA de Arquitectura?",
-    "category": "IA / Diseño",
-    "bluf": "Usa Moodboards con --sref en Midjourney para anclar tu estilo visual sin Fine-Tuning.",
-    "atomic_fact": "El parámetro --sref reduce la ambigüedad estilística en un 80%.",
-    "duration": "12:45",
-    "thumbnail": "https://img.youtube.com/vi/J1rZ8d6pYQo/maxresdefault.jpg",
-    "link": "https://youtu.be/J1rZ8d6pYQo",
-    "status": "Trending"
+    "id": "Cu5ka6Y3WtE",
+    "title": "Seedream 4.0: ¿Realmente funciona en Arquitectura?",
+    "thumbnail": "https://img.youtube.com/vi/Cu5ka6Y3WtE/maxresdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=Cu5ka6Y3WtE",
+    "atomic_fact": "Seedream 4.0 permite agregar contexto y variantes 4K a renders base, pero carece de consistencia geométrica macro para reemplazar el modelado preciso.",
+    "bluf": "La IA generativa funciona mejor como asistente de ambientación y explorador de variantes rápidas que como motor final. Su valor está en la iteración de atmósferas; el arquitecto debe filtrar las alucinaciones para mantener la precisión del proyecto.",
+    "topic": "INTELIGENCIA ARTIFICIAL",
+    "date": "2025-09-22"
   },
   {
-    "id": "CAM_CONTROL_ID",
-    "title": "Control de Cámara en Midjourney",
-    "category": "IA / Técnica",
-    "bluf": "Domina el encuadre con --ar y --zoom para composiciones arquitectónicas precisas.",
-    "atomic_fact": "El uso de --zoom 2x permite ampliar el lienzo manteniendo la coherencia geométrica.",
-    "duration": "08:30",
-    "thumbnail": "https://img.youtube.com/vi/CAM_CONTROL_ID/maxresdefault.jpg",
-    "link": "https://youtu.be/CAM_CONTROL_ID",
-    "status": "New"
+    "id": "_wcqFNmDIS8",
+    "title": "IA vs. Esencia Humana: ¿Perdemos creatividad?",
+    "thumbnail": "https://img.youtube.com/vi/_wcqFNmDIS8/maxresdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=_wcqFNmDIS8",
+    "atomic_fact": "La automatización de la producción visual por IA exige mayor criterio humano para evitar la homogeneización y lo genérico.",
+    "bluf": "La creatividad no se pierde, se transforma. Ante la facilidad de producción de la IA, el valor del arquitecto se desplaza del 'hacer' manual al 'decidir' estratégico. La tecnología es solo el medio; tu criterio y sensibilidad son el verdadero mensaje y diferencial.",
+    "topic": "INTELIGENCIA ARTIFICIAL",
+    "date": "2025-10-08"
   },
   {
-    "id": "A4sD7fG8hJ9",
-    "title": "Revit + IA: Automatización de Planos",
-    "category": "BIM / Automatización",
-    "bluf": "Scripts de Dynamo pueden reducir el tiempo de documentación en un 50%.",
-    "atomic_fact": "La estandarización de familias es clave para la automatización efectiva.",
-    "duration": "10:15",
-    "thumbnail": "https://img.youtube.com/vi/A4sD7fG8hJ9/maxresdefault.jpg",
-    "link": "https://youtu.be/A4sD7fG8hJ9",
-    "status": "Active"
+    "id": "QI67G9USOn4",
+    "title": "Del Render al Mundo: Gaussian Splatting y la Nueva Era",
+    "thumbnail": "https://img.youtube.com/vi/QI67G9USOn4/maxresdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=QI67G9USOn4",
+    "atomic_fact": "Gaussian Splatting reconstruye escenas 3D navegables desde video, superando al render estático al permitir la edición espacial de la realidad capturada.",
+    "bluf": "El paradigma cambia de 'imagen estática' a 'espacio navegable'. Esta tecnología permite digitalizar la realidad como nubes de puntos editables, integrando el entorno físico real en flujos BIM con precisión. No es solo ver, es operar sobre la realidad digitalizada.",
+    "topic": "INTELIGENCIA ARTIFICIAL",
+    "date": "2025-10-20"
   }
 ]
