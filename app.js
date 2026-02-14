@@ -2596,3 +2596,4 @@ function generateGeoSchema(data) {
     script.text = JSON.stringify(schema);
     console.log('JSON-LD injected/updated for SEO via generateGeoSchema (Items: ' + data.length + ').');
 }
+
