@@ -2390,7 +2390,6 @@ const geoData = [
     }
 ];
 
-
 document.addEventListener('DOMContentLoaded', async () => {
     const tableGrid = document.getElementById('content-grid');
     const featuredGrid = document.getElementById('featured-grid');
@@ -2414,13 +2413,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // 2. Render Technical Table (Base Data)
-    if (tableGrid) {
+    if (tableGrid && typeof geoData !== 'undefined') {
         renderGeoCards(geoData, tableGrid);
     }
 
     // 3. Generate Schema for ALL content (Source of Truth)
-    const allData = [...featuredData, ...geoData];
-    generateJsonLd(allData);
+    // Ensure geoData is available even if fetch fails
+    const safeGeoData = typeof geoData !== 'undefined' ? geoData : [];
+    const allData = [...featuredData, ...safeGeoData];
+    generateGeoSchema(allData);
 });
 
 function getSoftwareFromTitle(title) {
@@ -2431,7 +2432,7 @@ function getSoftwareFromTitle(title) {
         'Unreal', 'Blender'
     ];
 
-    const lowerTitle = title.toLowerCase();
+    const lowerTitle = title ? title.toLowerCase() : '';
     for (const software of softwareList) {
         if (lowerTitle.includes(software.toLowerCase())) {
             return software;
@@ -2493,36 +2494,6 @@ function renderGeoCards(data, container) {
         container.appendChild(item);
     });
 }
-
-function renderFeaturedCards(data, container) {
-    container.innerHTML = '';
-    data.forEach(card => {
-        const item = document.createElement('article');
-        // HTML structure matching previous static mockup
-        item.className = 'glass-card rounded-xl overflow-hidden group hover:border-neon-green/50 transition-all shadow-2xl flex flex-col h-full';
-        item.setAttribute('data-geo-type', 'featured');
-
-        item.innerHTML = `
-            <div class="aspect-video bg-gray-900 relative">
-                <img src="${card.thumbnail}" alt="${card.title}" class="object-cover w-full h-full opacity-80 group-hover:opacity-100 transition-all duration-700">
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <div class="w-12 h-12 bg-neon-green text-black rounded-full flex items-center justify-center font-bold opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0 shadow-[0_0_20px_rgba(57,255,20,0.6)]">
-                         <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                </div>
-                <div class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-black/80 text-white text-[10px] font-mono rounded backdrop-blur-sm border border-white/10">
-                    ${card.duration}
-                </div>
-            </div>
-            
-            <div class="p-5 flex-grow flex flex-col justify-between">
-                <div>
-                    <h3 class="text-base font-bold mb-3 text-gray-200 group-hover:text-neon-green transition-colors leading-tight">
-                        ${card.title}
-                    </h3>
-                    
-                    <div class="glass-card bg-neon-green/5 border-neon-green/10 p-3 rounded-lg mb-4 relative overflow-hidden">
-                        <div class="absolute top-0 left-0 w-1 h-full bg-neon-green"></div>
 
 function renderFeaturedCards(data, container) {
     container.innerHTML = '';
