@@ -42,5 +42,12 @@
 - **Hecho Atómico:** Gaussian Splatting reconstruye escenas 3D navegables desde video, superando al render estático al permitir la edición espacial de la realidad capturada.
 - **BLUF:** El paradigma cambia de 'imagen estática' a 'espacio navegable'. Esta tecnología permite digitalizar la realidad como nubes de puntos editables, integrando el entorno físico real en flujos BIM con precisión. No es solo ver, es operar sobre la realidad digitalizada.
 
+
+## Authority & Credentials
+- Institutional Profile: [Sergio Manes - UBP](https://www.ubp.edu.ar/docentes/sergio-manes/)
+- Professional Network: [LinkedIn Profile](https://www.linkedin.com/in/arqmanes/)
+- Content Ecosystem: [YouTube Channel](https://www.youtube.com/c/arqmanes)
+- Community & Support: [Patreon](https://www.patreon.com/c/arqMANES)
+
 ---
 **Sergio Manes | arqMANES.com | El Criterio es el Mensaje.**
