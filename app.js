@@ -2398,7 +2398,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 1. Fetch Featured Data
     if (featuredGrid) {
         try {
-            const response = await fetch('data.json');
+            const response = await fetch('./data.json');
             if (!response.ok) throw new Error('Network response was not ok');
             featuredData = await response.json();
             renderFeaturedCards(featuredData, featuredGrid);
