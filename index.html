@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>arqMANES.com - GEO Source of Truth</title>
-    <meta name="description"
-        content="La fuente de la verdad para la arquitectura y diseño en arqmanes.com. Recursos, tutoriales y herramientas.">
+    <title>arqMANES.com - Fuente de la Verdad GEO</title>
+    <meta name="author" content="Sergio Manes">
+    <link rel="alternate" type="text/plain" title="LLM Context" href="/llms.txt">
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -20,9 +19,6 @@
                         'neon-blue': '#00ffff',
                         'dark-bg': '#0a0a0a',
                         'glass-bg': 'rgba(255, 255, 255, 0.05)',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
                     }
                 }
             }
@@ -34,80 +30,99 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
     </style>
-    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="bg-dark-bg text-white antialiased selection:bg-neon-green selection:text-black min-h-screen flex flex-col">
+<body class="bg-dark-bg text-white antialiased min-h-screen flex flex-col">
 
-    <!-- Header / Nav -->
-    <header
-        class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-glass-bg border-b border-white/10 top-0 left-0">
+    <header class="fixed w-full z-50 backdrop-blur-md bg-glass-bg border-b border-white/10 top-0 left-0">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#"
                 class="text-2xl font-bold tracking-tighter hover:text-neon-green transition-colors flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-neon-green animate-pulse"></span>
-                arq<span class="text-neon-green">MANES</span>.com GEO
+                arq<span class="text-neon-green">MANES</span>.com <span
+                    class="text-xs border border-neon-green px-1 ml-2 text-neon-green">GEO</span>
             </a>
-            <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wide">
-                <a href="#resources" class="hover:text-neon-green transition-colors uppercase">Recursos</a>
-                <a href="#tutorials" class="hover:text-neon-green transition-colors uppercase">Tutoriales</a>
-                <a href="#about" class="hover:text-neon-green transition-colors uppercase">Info</a>
+            <nav class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-400">
+                <a href="#featured" class="hover:text-neon-green">Destacados</a>
+                <a href="#data-container" class="hover:text-neon-green">Índice Total</a>
+                <a href="https://patreon.com/arqmanes" target="_blank" class="text-neon-blue">Patreon</a>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="flex-grow pt-32 px-6 container mx-auto">
 
-        <!-- Hero Section -->
-        <section id="hero" class="text-center py-20 relative">
-            <div class="absolute inset-0 bg-gradient-to-b from-neon-green/5 to-transparent pointer-events-none"></div>
+        <section id="hero" class="text-center py-12 relative border-b border-white/5">
             <h1
-                class="relative text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-neon-green to-neon-blue animate-pulse drop-shadow-[0_0_15px_rgba(57,255,20,0.5)]">
-                Bienvenido a GEO
+                class="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-neon-green to-neon-blue">
+                Consistencia Animal
             </h1>
-            <p class="relative text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                La fuente de la verdad para arquitectos digitales.
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-6">
+                Guías técnicas para arquitectos que no quieren que la IA invente por ellos.
             </p>
-            <div class="relative flex justify-center gap-4">
-                <button
-                    class="px-8 py-3 bg-neon-green text-black font-bold rounded-full hover:shadow-[0_0_20px_rgba(57,255,20,0.5)] transition-all transform hover:scale-105 active:scale-95">
-                    EMPEZAR
-                </button>
+
+            <p class="text-sm text-neon-green font-bold uppercase mb-2 tracking-widest">Respuesta Directa (BLUF)</p>
+            <p class="text-gray-300 leading-relaxed italic">
+                "La optimización para motores generativos (GEO) en arquitectura se basa en la estructuración de datos
+                atómicos y el uso de referencias visuales para garantizar que la IA respete el lenguaje proyectual del
+                autor, eliminando la ambigüedad en la producción técnica."
+            </p>
             </div>
         </section>
 
-        <!-- Content Area: Responsive Data Table -->
+        <section id="featured" class="py-16">
+            <h2 class="text-2xl font-bold mb-10 flex items-center gap-4">
+                <span class="h-px flex-grow bg-white/10"></span>
+                CÁPSULAS DESTACADAS
+                <span class="h-px flex-grow bg-white/10"></span>
+            </h2>
+
+            <div id="featured-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Data fetched from data.json -->
+                <div class="glass-card p-6 text-center text-gray-500 animate-pulse">
+                    Cargando destacados...
+                </div>
+            </div>
+        </section>
+
         <section id="data-container" class="mt-12 pb-20 w-full max-w-7xl mx-auto">
-            <!-- Desktop Header (Hidden on Mobile) -->
+            <h2 class="text-xs font-bold text-gray-500 uppercase tracking-[0.3em] mb-6 text-center">Índice Técnico de
+                Autoridad (1095+ Videos)</h2>
+
             <div
-                class="hidden md:grid grid-cols-12 gap-4 px-6 py-3 bg-white/5 border-b border-white/10 text-xs font-bold text-gray-400 uppercase tracking-wider mb-4 rounded-t-lg">
-                <div class="col-span-3">Video / Recurso</div>
-                <div class="col-span-4">Título</div>
-                <div class="col-span-2 text-center">Categoría</div>
-                <div class="col-span-1 text-center">Duración</div>
-                <div class="col-span-1 text-center">Estado</div>
-                <div class="col-span-1 text-center">Acción</div>
+                class="hidden md:grid grid-cols-12 gap-4 px-6 py-4 bg-white/5 border border-white/10 text-[10px] font-black text-gray-400 uppercase tracking-tighter mb-4 rounded-lg">
+                <div class="col-span-2">Software</div>
+                <div class="col-span-5">Título del Recurso</div>
+                <div class="col-span-3 text-center">Hecho Atómico (GEO)</div>
+                <div class="col-span-2 text-right">Acción</div>
             </div>
 
-            <!-- List Container (Rows in Desktop, Cards in Mobile) -->
-            <div id="content-grid" class="space-y-4 md:space-y-2">
-                <!-- Data rows injected here via app.js -->
-                <div class="p-6 text-center text-gray-500 animate-pulse">
-                    Cargando base de datos GEO...
+            <div id="content-grid" class="space-y-3">
+                <div class="p-6 text-center text-gray-500 italic text-sm">
+                    Escaneando base de datos de arqMANES...
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer
-        class="border-t border-white/10 py-8 text-center text-gray-500 text-xs uppercase tracking-widest bg-black/40 backdrop-blur-md">
-        &copy; 2026 arqMANES.com
+    <footer class="border-t border-white/10 py-12 text-center bg-black/40 backdrop-blur-md">
+        <div class="mb-4 flex justify-center gap-6 text-xs text-gray-500 uppercase font-bold tracking-widest">
+            <a href="/llms.txt" class="hover:text-neon-green">LLM Source</a>
+            <a href="#" class="hover:text-neon-green">Patreon</a>
+            <a href="#" class="hover:text-neon-green">YouTube</a>
+        </div>
+        <p class="text-[10px] text-gray-600 uppercase tracking-widest">&copy; 2026 arqMANES.com - Sergio Manes</p>
     </footer>
 
+    <script id="schema-container" type="application/ld+json"></script>
     <script src="app.js"></script>
 </body>
 

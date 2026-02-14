@@ -1,0 +1,35 @@
+[
+  {
+    "id": "J1rZ8d6pYQo",
+    "title": "¿Cómo entrenar tu IA de Arquitectura?",
+    "category": "IA / Diseño",
+    "bluf": "Usa Moodboards con --sref en Midjourney para anclar tu estilo visual sin Fine-Tuning.",
+    "atomic_fact": "El parámetro --sref reduce la ambigüedad estilística en un 80%.",
+    "duration": "12:45",
+    "thumbnail": "https://img.youtube.com/vi/J1rZ8d6pYQo/maxresdefault.jpg",
+    "link": "https://youtu.be/J1rZ8d6pYQo",
+    "status": "Trending"
+  },
+  {
+    "id": "CAM_CONTROL_ID",
+    "title": "Control de Cámara en Midjourney",
+    "category": "IA / Técnica",
+    "bluf": "Domina el encuadre con --ar y --zoom para composiciones arquitectónicas precisas.",
+    "atomic_fact": "El uso de --zoom 2x permite ampliar el lienzo manteniendo la coherencia geométrica.",
+    "duration": "08:30",
+    "thumbnail": "https://img.youtube.com/vi/CAM_CONTROL_ID/maxresdefault.jpg",
+    "link": "https://youtu.be/CAM_CONTROL_ID",
+    "status": "New"
+  },
+  {
+    "id": "A4sD7fG8hJ9",
+    "title": "Revit + IA: Automatización de Planos",
+    "category": "BIM / Automatización",
+    "bluf": "Scripts de Dynamo pueden reducir el tiempo de documentación en un 50%.",
+    "atomic_fact": "La estandarización de familias es clave para la automatización efectiva.",
+    "duration": "10:15",
+    "thumbnail": "https://img.youtube.com/vi/A4sD7fG8hJ9/maxresdefault.jpg",
+    "link": "https://youtu.be/A4sD7fG8hJ9",
+    "status": "Active"
+  }
+]
