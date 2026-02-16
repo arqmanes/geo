@@ -34,7 +34,7 @@ async function deploy() {
 
         console.log('✅ Conexión establecida.');
 
-        const remoteRoot = '/public_html';
+        const remoteRoot = process.env.FTP_REMOTE_ROOT || '/domains/arqmanes.com/public_html';
         const localRoot = __dirname;
 
         console.log(`📂 Subiendo archivos desde ${localRoot} a ${remoteRoot}...`);
