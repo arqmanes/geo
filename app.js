@@ -2556,7 +2556,7 @@ function renderFeaturedCards(data, container) {
                     <div class="glass-card bg-neon-green/5 border-neon-green/10 p-3 rounded-lg mb-4 relative overflow-hidden">
                         <div class="absolute top-0 left-0 w-1 h-full bg-neon-green"></div>
                         <p class="text-xs text-gray-300 leading-snug pl-2">
-                            <strong class="text-neon-green uppercase tracking-wide text-[10px] block mb-1">BLUF (Respuesta Directa):</strong>
+                            <strong class="text-neon-green uppercase tracking-wide text-[10px] block mb-1">> SÍNTESIS:</strong>
                             <span class="italic text-gray-400">"${card.bluf || 'Información no disponible.'}"</span>
                         </p>
                     </div>
@@ -2564,7 +2564,7 @@ function renderFeaturedCards(data, container) {
                     ${card.atomic_fact ? `
                     <div class="mb-4 pl-3 border-l border-neon-blue/30">
                         <p class="text-[10px] text-gray-500 leading-tight">
-                            <strong class="text-neon-blue uppercase">Hecho Atómico:</strong>
+                            <strong class="text-neon-blue uppercase">> HECHO ATÓMICO:</strong>
                             <br>
                             ${card.atomic_fact}
                         </p>
