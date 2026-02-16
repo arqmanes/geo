@@ -2564,7 +2564,7 @@ function renderFeaturedCards(data, container) {
                     ${card.atomic_fact ? `
                     <div class="mb-4 pl-3 border-l border-neon-blue/30">
                         <p class="text-[10px] text-gray-500 leading-tight">
-                            <strong class="text-neon-blue uppercase">> HECHO ATÓMICO:</strong>
+                            <strong class="text-neon-blue uppercase">> ANÁLISIS TÉCNICO:</strong>
                             <br>
                             ${card.atomic_fact}
                         </p>
@@ -2686,7 +2686,7 @@ function renderAgenda(data, container) {
 
             ${isPast ? `
                 <div class="mt-4 w-full text-center py-2 rounded border border-gray-600/30 text-gray-500 text-xs font-bold uppercase tracking-widest bg-gray-600/5 cursor-not-allowed">
-                    Misión Cumplida
+                    [REALIZADO]
                 </div>
             ` : `
                 <a href="${item.link}" target="_blank" class="mt-4 w-full text-center py-2 rounded border border-neon-green/30 text-neon-green hover:bg-neon-green hover:text-black transition-all text-xs font-bold uppercase tracking-widest">
