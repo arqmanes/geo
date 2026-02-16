@@ -12,7 +12,10 @@ async function updateAll() {
         console.log('📡 Fetching YouTube RSS feed...');
         const feed = await parser.parseURL(YOUTUBE_RSS_URL);
 
-        const latestItems = feed.items.slice(0, 3);
+        // Filter out shorts and take top 3 latest videos
+        const latestItems = feed.items
+            .filter(item => !item.link.includes('/shorts/'))
+            .slice(0, 3);
 
         // 1. Update llms.txt
         const latestVideosLLMS = latestItems.map((item, index) => {
