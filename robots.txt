@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://www.arqmanes.com/sitemap.xml

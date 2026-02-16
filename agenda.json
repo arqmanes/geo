@@ -1,0 +1,32 @@
+[
+    {
+        "id": "event-001",
+        "title": "Conferencia: IA Generativa en Procesos BIM",
+        "bluf": "La integración de IA en BIM no reemplaza al arquitecto, sino que automatiza la documentación tediosa. La clave está en la curaduría de datos y la supervisión técnica para evitar alucinaciones en los modelos constructivos.",
+        "date": "2025-11-15",
+        "location": "Madrid, España (Presencial)",
+        "link": "https://www.linkedin.com/in/arqmanes/",
+        "type": "Conference",
+        "thumbnail": "https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+        "id": "event-002",
+        "title": "Workshop: Prompt Engineering para Arquitectos",
+        "bluf": "Aprende a estructurar prompts técnicos que generen resultados precisos en renderizado y planimetría. Dejemos de pedir 'imágenes bonitas' y empecemos a solicitar soluciones constructivas verificables.",
+        "date": "2025-12-10",
+        "location": "Online (Zoom)",
+        "link": "https://www.patreon.com/c/arqMANES",
+        "type": "Workshop",
+        "thumbnail": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+        "id": "event-003",
+        "title": "Panel: El Futuro de la Profesión ante la Automatización",
+        "bluf": "El rol del arquitecto evoluciona de 'creador de dibujos' a 'auditor de sistemas'. La autoridad semántica y la experiencia en obra serán los únicos diferenciadores reales frente a la generación automática de proyectos.",
+        "date": "2026-01-20",
+        "location": "Buenos Aires, Argentina",
+        "link": "https://www.youtube.com/c/arqmanes",
+        "type": "Conference",
+        "thumbnail": "https://images.unsplash.com/photo-1475721027767-f7566de8a5a0?q=80&w=2069&auto=format&fit=crop"
+    }
+]

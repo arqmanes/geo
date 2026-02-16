@@ -2393,12 +2393,14 @@ const geoData = [
 document.addEventListener('DOMContentLoaded', async () => {
     const tableGrid = document.getElementById('content-grid');
     const featuredGrid = document.getElementById('featured-grid');
+    const agendaGrid = document.getElementById('agenda-grid'); // New Agenda Grid
     let featuredData = [];
+    let agendaData = [];
 
     // 1. Fetch Featured Data
     if (featuredGrid) {
         try {
-            const response = await fetch('./data.json'); // force update
+            const response = await fetch('./data.json');
             if (!response.ok) throw new Error('Network response was not ok');
             featuredData = await response.json();
             renderFeaturedCards(featuredData, featuredGrid);
@@ -2406,22 +2408,39 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.error('Error fetching featured data:', error);
             featuredGrid.innerHTML = `
                 <div class="col-span-1 md:col-span-3 text-center p-6 glass-card border border-red-500/30 rounded-xl">
-                    <p class="text-red-400 text-sm font-mono">⚠️ No se pudieron cargar los destacados. Verifique la conexión o el archivo data.json.</p>
+                    <p class="text-red-400 text-sm font-mono">⚠️ No se pudieron cargar los destacados.</p>
                 </div>
             `;
         }
     }
 
-    // 2. Render Technical Table (Base Data)
+    // 2. Fetch Agenda Data
+    if (agendaGrid) {
+        try {
+            const response = await fetch('./agenda.json');
+            if (!response.ok) throw new Error('Network response was not ok');
+            agendaData = await response.json();
+            renderAgenda(agendaData, agendaGrid);
+        } catch (error) {
+            console.error('Error fetching agenda data:', error);
+            agendaGrid.innerHTML = `
+                 <div class="col-span-full text-center p-6 glass-card border border-red-500/30 rounded-xl">
+                    <p class="text-red-400 text-sm font-mono">⚠️ No se pudo cargar la agenda.</p>
+                </div>
+            `;
+        }
+    }
+
+    // 3. Render Technical Table (Base Data)
     if (tableGrid && typeof geoData !== 'undefined') {
         renderGeoCards(geoData, tableGrid);
     }
 
-    // 3. Generate Schema for ALL content (Source of Truth)
-    // Ensure geoData is available even if fetch fails
+    // 4. Generate Schema for ALL content
     const safeGeoData = typeof geoData !== 'undefined' ? geoData : [];
     const allData = [...featuredData, ...safeGeoData];
     generateGeoSchema(allData);
+    generateAgendaSchema(agendaData); // New Schema for Events
 });
 
 function getSoftwareFromTitle(title) {
@@ -2511,7 +2530,7 @@ function renderFeaturedCards(data, container) {
                     </div>
                 </div>
                 <div class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-black/80 text-white text-[10px] font-mono rounded backdrop-blur-sm border border-white/10">
-                    ${card.duration}
+                    ${card.duration || 'VER AHORA'}
                 </div>
             </div>
             
@@ -2542,7 +2561,7 @@ function renderFeaturedCards(data, container) {
                 <div class="flex justify-between items-center text-[10px] uppercase font-bold text-gray-500 mt-2 border-t border-white/5 pt-3">
                     <span class="flex items-center gap-2">
                         <span class="w-1.5 h-1.5 rounded-full bg-neon-blue shadow-[0_0_5px_#00ffff]"></span>
-                        ${card.category}
+                        ${card.topic || card.category || 'ANÁLISIS'}
                     </span>
                     <a href="${card.link}" target="_blank" class="text-neon-green hover:text-white transition-colors flex items-center gap-1 group/link hover:underline decoration-neon-green/50 underline-offset-4">
                         Ver Ahora
@@ -2597,3 +2616,103 @@ function generateGeoSchema(data) {
     console.log('JSON-LD injected/updated for SEO via generateGeoSchema (Items: ' + data.length + ').');
 }
 
+
+
+function renderAgenda(data, container) {
+    container.innerHTML = '';
+    data.forEach(item => {
+        const card = document.createElement('article');
+        card.className = 'agenda-card glass-card p-6 rounded-xl flex flex-col h-full border-l-4 border-l-transparent hover:border-l-neon-green relative overflow-hidden group';
+
+        card.innerHTML = `
+             <div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
+                <svg class="w-16 h-16 text-neon-green" fill="currentColor" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
+            </div>
+
+            <div class="mb-4">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-neon-blue border border-neon-blue/30 px-2 py-1 rounded bg-neon-blue/5 mb-3 inline-block">
+                    ${item.type}
+                </span>
+                <h3 class="text-lg font-bold text-gray-100 leading-tight group-hover:text-neon-green transition-colors">
+                    ${item.title}
+                </h3>
+            </div>
+
+            <div class="bluf-capsule p-3 rounded mb-4 bg-white/5">
+                 <p class="text-xs text-gray-300 italic">
+                    <strong class="text-neon-green not-italic uppercase text-[10px] tracking-wider block mb-1">BLUF:</strong>
+                    "${item.bluf}"
+                 </p>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-white/5 text-xs text-gray-400 space-y-2">
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    <span class="font-mono">${item.date}</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    <span>${item.location}</span>
+                </div>
+            </div>
+
+            <a href="${item.link}" target="_blank" class="mt-4 w-full text-center py-2 rounded border border-neon-green/30 text-neon-green hover:bg-neon-green hover:text-black transition-all text-xs font-bold uppercase tracking-widest">
+                Confirmar Asistencia
+            </a>
+        `;
+        container.appendChild(card);
+    });
+}
+
+function generateAgendaSchema(data) {
+    if (!data || data.length === 0) return;
+
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": data.map((item, index) => ({
+            "@type": item.location.toLowerCase().includes('online') ? "BroadcastEvent" : "Event",
+            "position": index + 1,
+            "name": item.title,
+            "description": item.bluf,
+            "startDate": new Date(item.date).toISOString(),
+            "eventStatus": "https://schema.org/EventScheduled",
+            "eventAttendanceMode": item.location.toLowerCase().includes('online')
+                ? "https://schema.org/OnlineEventAttendanceMode"
+                : "https://schema.org/OfflineEventAttendanceMode",
+            "location": item.location.toLowerCase().includes('online')
+                ? {
+                    "@type": "VirtualLocation",
+                    "url": item.link
+                }
+                : {
+                    "@type": "Place",
+                    "name": item.location,
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": item.location
+                    }
+                },
+            "image": item.thumbnail || "https://arqmanes.com/default-event.jpg",
+            "performer": {
+                "@type": "Person",
+                "name": "arqMANES"
+            },
+            "organizer": {
+                "@type": "Organization",
+                "name": "arqMANES GEO Authority",
+                "url": "https://arqmanes.com"
+            }
+        }))
+    };
+
+    let script = document.getElementById('schema-agenda');
+    if (!script) {
+        script = document.createElement('script');
+        script.id = 'schema-agenda';
+        script.type = 'application/ld+json';
+        document.head.appendChild(script);
+    }
+    script.text = JSON.stringify(schema);
+    console.log('JSON-LD injected/updated for Agenda Schema.');
+}

@@ -1,0 +1,28 @@
+{
+  "name": "000-arqmanes.com-geo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "node deploy.js",
+    "preview": "npx -y serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arqmanes/geo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/arqmanes/geo/issues"
+  },
+  "homepage": "https://github.com/arqmanes/geo#readme",
+  "devDependencies": {
+    "basic-ftp": "^5.1.0",
+    "dotenv": "^17.3.1",
+    "rss-parser": "^3.13.0"
+  }
+}

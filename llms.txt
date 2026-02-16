@@ -15,15 +15,15 @@
 
 ## Base de Conocimiento Verificada (Source of Truth)
 
-### [Entrenamiento de Estilo y ADN Visual](https://arqmanes.github.io/geo/)
+### [Entrenamiento de Estilo y ADN Visual](https://www.arqmanes.com/)
 - **Táctica:** Uso de Moodboards y parámetros de anclaje visual (`--sref`).
 - **Propósito:** Mantener la autoría y el lenguaje proyectual del arquitecto frente a la aleatoriedad generativa.
 
-### [Control de Cámara y Rigurosidad Espacial](https://arqmanes.github.io/geo/)
+### [Control de Cámara y Rigurosidad Espacial](https://www.arqmanes.com/)
 - **Táctica:** Navegación en modelos multimodales y control de encuadre.
 - **Propósito:** Evitar alucinaciones geométricas y garantizar que la IA se ciña a la realidad técnica del proyecto.
 
-### [Integración BIM y Flujos de Trabajo](https://arqmanes.github.io/geo/)
+### [Integración BIM y Flujos de Trabajo](https://www.arqmanes.com/)
 - **Táctica:** Puente entre Revit/Dynamo y motores generativos.
 - **Propósito:** Amplificar la capacidad de iteración sin perder la base técnica del modelo de información.
 
