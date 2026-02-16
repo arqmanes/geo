@@ -2445,8 +2445,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // 3. Render Technical Table (Base Data)
-    if (tableGrid && typeof geoData !== 'undefined') {
-        renderGeoCards(geoData, tableGrid);
+    if (tableGrid) {
+        const countDisplay = document.getElementById('video-count');
+        if (countDisplay) countDisplay.textContent = featuredData.length;
+        renderGeoCards(featuredData, tableGrid);
     }
 
     // 4. Generate Schema for ALL content
@@ -2477,47 +2479,40 @@ function renderGeoCards(data, container) {
     container.innerHTML = ''; // Clear loading state
 
     data.forEach(card => {
-        const software = getSoftwareFromTitle(card.title);
         const item = document.createElement('div');
 
         // Base classes: Mobile Stack -> Desktop Grid (2-5-3-2)
         item.className = 'glass-card p-4 rounded-xl flex flex-col md:grid md:grid-cols-12 gap-4 items-start md:items-center hover:bg-white/5 transition-all group cursor-pointer border-l-4 border-l-transparent hover:border-l-neon-green';
 
         item.innerHTML = `
-            <!-- Column 1: Software/Thumbnail (Desktop: 2 cols) -->
-            <div class="col-span-12 md:col-span-2 flex flex-row md:flex-col gap-4 md:gap-2 items-center md:items-start w-full">
-                <div class="relative w-24 md:w-full h-16 md:h-12 rounded overflow-hidden flex-shrink-0 border border-white/10 group-hover:border-neon-green/50 transition-colors">
-                    <img src="${card.thumbnail}" alt="${software}" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+            <!-- Column 1: Thumbnail (Desktop: 2 cols) -->
+            <div class="col-span-12 md:col-span-2 w-full">
+                <div class="relative aspect-video rounded overflow-hidden border border-white/10 group-hover:border-neon-green/50 transition-colors shadow-lg">
+                    <img src="${card.thumbnail}" alt="${card.title}" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500">
                 </div>
-                <span class="text-xs font-bold text-neon-green uppercase tracking-wider md:hidden">${software}</span>
-                <span class="hidden md:inline-block px-2 py-0.5 bg-white/5 rounded text-[10px] font-mono text-gray-400 uppercase tracking-widest group-hover:text-neon-green transition-colors border border-white/5">
-                    ${software}
-                </span>
             </div>
 
-            <!-- Column 2: Title (Desktop: 5 cols) -->
-            <div class="col-span-12 md:col-span-5 w-full">
+            <!-- Column 2: Identity (Desktop: 5 cols) -->
+            <div class="col-span-12 md:col-span-5 w-full flex flex-col gap-1">
+                <span class="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] group-hover:text-neon-green transition-colors">
+                    ${card.category || 'CONTENIDO'}
+                </span>
                 <h3 class="text-sm font-bold text-gray-200 group-hover:text-white transition-colors leading-snug">
                     ${card.title}
                 </h3>
             </div>
 
-            <!-- Column 3: Atomic Fact/Category (Desktop: 3 cols) -->
-            <div class="col-span-12 md:col-span-3 w-full text-left md:text-center">
-                <div class="flex flex-wrap gap-2 md:justify-center">
-                    <span class="bg-neon-green/5 text-neon-green border border-neon-green/20 px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider">
-                         ${card.category}
-                    </span>
-                    <span class="text-xs text-gray-500 font-mono self-center">
-                        ${card.duration}
-                    </span>
-                </div>
+            <!-- Column 3: Synthesis (Desktop: 3 cols) -->
+            <div class="col-span-12 md:col-span-3 w-full">
+                <p class="text-[11px] text-gray-400 font-light italic leading-relaxed line-clamp-2 md:text-center px-2">
+                    "${card.bluf || 'Sin síntesis disponible.'}"
+                </p>
             </div>
 
             <!-- Column 4: Action (Desktop: 2 cols) -->
             <div class="col-span-12 md:col-span-2 flex justify-end w-full">
-                <a href="${card.link}" target="_blank" class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-gray-500 hover:text-neon-blue transition-colors group-hover:translate-x-1 duration-300">
-                    Ver Recurso
+                <a href="${card.link}" target="_blank" class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-neon-green/50 group-hover:text-neon-green transition-colors group-hover:translate-x-1 duration-300">
+                    Ver Ahora
                     <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </a>
             </div>
