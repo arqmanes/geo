@@ -7,36 +7,30 @@ const YOUTUBE_RSS_URL = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCs
 const LLMS_FILE_PATH = path.join(__dirname, '../llms.txt');
 const DATA_JSON_PATH = path.join(__dirname, '../data.json');
 
+const VIDEOS_JSON_PATH = path.join(__dirname, '../data/videos.json');
+
 async function updateAll() {
     try {
-        console.log('📡 Fetching YouTube RSS feed...');
-        const feed = await parser.parseURL(YOUTUBE_RSS_URL);
+        console.log('📖 Reading manual Source of Truth (data/videos.json)...');
+        if (!fs.existsSync(VIDEOS_JSON_PATH)) {
+            throw new Error('data/videos.json not found. Please create it first.');
+        }
 
-        // Filter out shorts and take top 3 latest videos
-        const latestItems = feed.items
-            .filter(item => !item.link.includes('/shorts/'))
-            .slice(0, 3);
+        const rawData = fs.readFileSync(VIDEOS_JSON_PATH, 'utf8');
+        const videos = JSON.parse(rawData);
 
-        // 1. Update llms.txt
-        const latestVideosLLMS = latestItems.map((item, index) => {
-            const date = new Date(item.pubDate);
+        // 1. Update llms.txt with curated data
+        const latestVideosLLMS = videos.slice(0, 3).map((v, index) => {
+            const date = new Date(v.fecha);
             const formattedDate = date.toLocaleDateString('es-ES', {
                 day: '2-digit',
                 month: 'short',
                 year: '2-digit'
             }).replace('.', '');
 
-            // Better description extraction
-            let description = item.contentSnippet || '';
-            if (description.length < 20) {
-                description = `Análisis profundo sobre ${item.title}. Sergio Manes explora la integración de IA y procesos de diseño arquitectónico profesional.`;
-            } else if (description.length > 200) {
-                description = description.substring(0, 200) + "...";
-            }
-
-            return `### ${index + 1}. ${item.title} (${formattedDate})\n` +
-                `- **Hecho Atómico:** ${description}\n` +
-                `- **BLUF:** Estrategia GEO aplicada a: ${item.title}. Accede al contenido de alta fidelidad: ${item.link}\n`;
+            return `### ${index + 1}. ${v.titulo} (${formattedDate})\n` +
+                `- **Hecho Atómico:** ${v.hecho_atomico}\n` +
+                `- **BLUF:** ${v.bluf} Accede al contenido de alta fidelidad: ${v.url}\n`;
         });
 
         const newContentLLMS = latestVideosLLMS.join('\n');
@@ -52,37 +46,25 @@ async function updateAll() {
             const before = llmsContent.substring(0, startIndex + sectionStart.length);
             const after = llmsContent.substring(endIndex);
             fs.writeFileSync(LLMS_FILE_PATH, `${before}\n\n${newContentLLMS}\n\n${after}`, 'utf8');
-            console.log('✅ llms.txt updated successfully.');
+            console.log('✅ llms.txt updated successfully from SSOT.');
         } else {
             console.warn('⚠️ Could not find update markers in llms.txt. Skipping partial update.');
         }
 
-        // 2. Update data.json
-        const newDataJSON = latestItems.map(item => {
-            const videoId = item.id.split(':').pop();
-            const date = new Date(item.pubDate).toISOString().split('T')[0];
+        // 2. Sync data.json (as backup/compatibility)
+        const compatibilityData = videos.map(v => ({
+            id: v.id,
+            title: v.titulo,
+            thumbnail: `https://img.youtube.com/vi/${v.id}/maxresdefault.jpg`,
+            link: v.url,
+            atomic_fact: v.hecho_atomico,
+            bluf: v.bluf,
+            topic: v.categoria || "INTELIGENCIA ARTIFICIAL",
+            date: v.fecha
+        }));
 
-            let fact = item.contentSnippet || '';
-            if (fact.length < 20) {
-                fact = `Exploración técnica y estratégica de "${item.title}". Sergio Manes analiza el impacto de la IA en el flujo de trabajo profesional.`;
-            } else if (fact.length > 150) {
-                fact = fact.substring(0, 150) + "...";
-            }
-
-            return {
-                id: videoId,
-                title: item.title,
-                thumbnail: `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
-                link: item.link,
-                atomic_fact: fact,
-                bluf: item.title + ". Innovación y criterio en el diseño asistido por IA.",
-                topic: "INTELIGENCIA ARTIFICIAL",
-                date: date
-            };
-        });
-
-        fs.writeFileSync(DATA_JSON_PATH, JSON.stringify(newDataJSON, null, 2), 'utf8');
-        console.log('✅ data.json updated successfully.');
+        fs.writeFileSync(DATA_JSON_PATH, JSON.stringify(compatibilityData, null, 2), 'utf8');
+        console.log('✅ data.json synced for compatibility.');
 
     } catch (error) {
         console.error('❌ Error updating files:', error);

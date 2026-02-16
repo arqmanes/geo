@@ -4,9 +4,9 @@
     "title": "¡AL FIN! Mueve la CÁMARA de tus renders con IA (Gratis)",
     "thumbnail": "https://img.youtube.com/vi/T2cK10z9otc/maxresdefault.jpg",
     "link": "https://www.youtube.com/watch?v=T2cK10z9otc",
-    "atomic_fact": "Exploración técnica y estratégica de \"¡AL FIN! Mueve la CÁMARA de tus renders con IA (Gratis)\". Sergio Manes analiza el impacto de la IA en el flujo de trabajo profesional.",
-    "bluf": "¡AL FIN! Mueve la CÁMARA de tus renders con IA (Gratis). Innovación y criterio en el diseño asistido por IA.",
-    "topic": "INTELIGENCIA ARTIFICIAL",
+    "atomic_fact": "Técnica de paralaje sintético: permite generar recorridos (travelling) sobre renders estáticos sin distorsión geométrica, usando mapas de profundidad.",
+    "bluf": "Estrategia para disociar la cámara física de la virtual en flujos de renderizado.",
+    "topic": "TÉCNICA AVANZADA",
     "date": "2026-02-09"
   },
   {
@@ -14,19 +14,19 @@
     "title": "La iA te vuelve visible: ¿qué deja expuesto de vos?",
     "thumbnail": "https://img.youtube.com/vi/2IgdAWF-GQA/maxresdefault.jpg",
     "link": "https://www.youtube.com/watch?v=2IgdAWF-GQA",
-    "atomic_fact": "Exploración técnica y estratégica de \"La iA te vuelve visible: ¿qué deja expuesto de vos?\". Sergio Manes analiza el impacto de la IA en el flujo de trabajo profesional.",
-    "bluf": "La iA te vuelve visible: ¿qué deja expuesto de vos?. Innovación y criterio en el diseño asistido por IA.",
-    "topic": "INTELIGENCIA ARTIFICIAL",
-    "date": "2026-02-03"
+    "atomic_fact": "La IA no 'copia' estilos, decodifica patrones probabilísticos. Tu identidad visual es ahora un dataset legible; la estrategia es curar esa data conscientemente.",
+    "bluf": "Análisis de huella digital y decodificación algorítmica de estilos.",
+    "topic": "FILOSOFÍA",
+    "date": "2026-02-02"
   },
   {
     "id": "JRVeojxM8WY",
     "title": "D5 Render 3.0: de operador a director, con la iA como socio",
     "thumbnail": "https://img.youtube.com/vi/JRVeojxM8WY/maxresdefault.jpg",
     "link": "https://www.youtube.com/watch?v=JRVeojxM8WY",
-    "atomic_fact": "Exploración técnica y estratégica de \"D5 Render 3.0: de operador a director, con la iA como socio\". Sergio Manes analiza el impacto de la IA en el flujo de trabajo profesional.",
-    "bluf": "D5 Render 3.0: de operador a director, con la iA como socio. Innovación y criterio en el diseño asistido por IA.",
-    "topic": "INTELIGENCIA ARTIFICIAL",
-    "date": "2026-01-20"
+    "atomic_fact": "El renderizado híbrido (Rasterización + IA) elimina la carga técnica de la ambientación, exigiendo al arquitecto mayor criterio en composición e iluminación.",
+    "bluf": "Cambio de rol: del texturizado manual a la dirección de arte asistida.",
+    "topic": "WORKFLOW",
+    "date": "2026-01-19"
   }
 ]

@@ -2400,9 +2400,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 1. Fetch Featured Data
     if (featuredGrid) {
         try {
-            const response = await fetch('./data.json');
+            const response = await fetch('./data/videos.json');
             if (!response.ok) throw new Error('Network response was not ok');
-            featuredData = await response.json();
+            const rawData = await response.json();
+
+            // Map Spanish keys from SSOT to internal English keys
+            featuredData = rawData.map(v => ({
+                id: v.id,
+                title: v.titulo,
+                date: v.fecha,
+                bluf: v.bluf,
+                atomic_fact: v.hecho_atomico,
+                category: v.categoria,
+                link: v.url,
+                thumbnail: `https://img.youtube.com/vi/${v.id}/maxresdefault.jpg`
+            }));
+
             renderFeaturedCards(featuredData, featuredGrid);
         } catch (error) {
             console.error('Error fetching featured data:', error);

@@ -1,0 +1,29 @@
+[
+    {
+        "id": "T2cK10z9otc",
+        "titulo": "¡AL FIN! Mueve la CÁMARA de tus renders con IA (Gratis)",
+        "fecha": "2026-02-09",
+        "bluf": "Estrategia para disociar la cámara física de la virtual en flujos de renderizado.",
+        "hecho_atomico": "Técnica de paralaje sintético: permite generar recorridos (travelling) sobre renders estáticos sin distorsión geométrica, usando mapas de profundidad.",
+        "categoria": "TÉCNICA AVANZADA",
+        "url": "https://www.youtube.com/watch?v=T2cK10z9otc"
+    },
+    {
+        "id": "2IgdAWF-GQA",
+        "titulo": "La iA te vuelve visible: ¿qué deja expuesto de vos?",
+        "fecha": "2026-02-02",
+        "bluf": "Análisis de huella digital y decodificación algorítmica de estilos.",
+        "hecho_atomico": "La IA no 'copia' estilos, decodifica patrones probabilísticos. Tu identidad visual es ahora un dataset legible; la estrategia es curar esa data conscientemente.",
+        "categoria": "FILOSOFÍA",
+        "url": "https://www.youtube.com/watch?v=2IgdAWF-GQA"
+    },
+    {
+        "id": "JRVeojxM8WY",
+        "titulo": "D5 Render 3.0: de operador a director, con la iA como socio",
+        "fecha": "2026-01-19",
+        "bluf": "Cambio de rol: del texturizado manual a la dirección de arte asistida.",
+        "hecho_atomico": "El renderizado híbrido (Rasterización + IA) elimina la carga técnica de la ambientación, exigiendo al arquitecto mayor criterio en composición e iluminación.",
+        "categoria": "WORKFLOW",
+        "url": "https://www.youtube.com/watch?v=JRVeojxM8WY"
+    }
+]
