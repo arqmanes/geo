@@ -2653,7 +2653,7 @@ function renderAgenda(data, container) {
 
             <div class="bluf-capsule p-3 rounded mb-4 bg-white/5">
                  <p class="text-xs text-gray-300 italic">
-                    <strong class="text-neon-green not-italic uppercase text-[10px] tracking-wider block mb-1">BLUF:</strong>
+                    <strong class="text-neon-green not-italic uppercase text-[10px] tracking-wider block mb-1">> FOCUS:</strong>
                     "${item.bluf}"
                  </p>
             </div>
