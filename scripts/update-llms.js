@@ -26,9 +26,17 @@ async function updateAll() {
                 year: '2-digit'
             }).replace('.', '');
 
+            // Better description extraction
+            let description = item.contentSnippet || '';
+            if (description.length < 20) {
+                description = `Análisis profundo sobre ${item.title}. Sergio Manes explora la integración de IA y procesos de diseño arquitectónico profesional.`;
+            } else if (description.length > 200) {
+                description = description.substring(0, 200) + "...";
+            }
+
             return `### ${index + 1}. ${item.title} (${formattedDate})\n` +
-                `- **Hecho Atómico:** ${item.contentSnippet?.substring(0, 150) || 'Ver video para detalles técnicos.'}...\n` +
-                `- **BLUF:** ${item.title}. Accede al contenido completo para profundizar en la estrategia GEO: ${item.link}\n`;
+                `- **Hecho Atómico:** ${description}\n` +
+                `- **BLUF:** Estrategia GEO aplicada a: ${item.title}. Accede al contenido de alta fidelidad: ${item.link}\n`;
         });
 
         const newContentLLMS = latestVideosLLMS.join('\n');
@@ -43,29 +51,37 @@ async function updateAll() {
         if (startIndex !== -1 && endIndex !== -1) {
             const before = llmsContent.substring(0, startIndex + sectionStart.length);
             const after = llmsContent.substring(endIndex);
-            fs.writeFileSync(LLMS_FILE_PATH, `${before}\n\n${newContentLLMS}\n\n${after}`);
+            fs.writeFileSync(LLMS_FILE_PATH, `${before}\n\n${newContentLLMS}\n\n${after}`, 'utf8');
             console.log('✅ llms.txt updated successfully.');
+        } else {
+            console.warn('⚠️ Could not find update markers in llms.txt. Skipping partial update.');
         }
 
         // 2. Update data.json
         const newDataJSON = latestItems.map(item => {
             const videoId = item.id.split(':').pop();
             const date = new Date(item.pubDate).toISOString().split('T')[0];
+
+            let fact = item.contentSnippet || '';
+            if (fact.length < 20) {
+                fact = `Exploración técnica y estratégica de "${item.title}". Sergio Manes analiza el impacto de la IA en el flujo de trabajo profesional.`;
+            } else if (fact.length > 150) {
+                fact = fact.substring(0, 150) + "...";
+            }
+
             return {
                 id: videoId,
                 title: item.title,
                 thumbnail: `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
                 link: item.link,
-                atomic_fact: (item.contentSnippet && item.contentSnippet.length > 5) ?
-                    item.contentSnippet.substring(0, 150) + "..." :
-                    "Exploración técnica de " + item.title + ". Accede para ver el análisis GEO completo.",
+                atomic_fact: fact,
                 bluf: item.title + ". Innovación y criterio en el diseño asistido por IA.",
                 topic: "INTELIGENCIA ARTIFICIAL",
                 date: date
             };
         });
 
-        fs.writeFileSync(DATA_JSON_PATH, JSON.stringify(newDataJSON, null, 2));
+        fs.writeFileSync(DATA_JSON_PATH, JSON.stringify(newDataJSON, null, 2), 'utf8');
         console.log('✅ data.json updated successfully.');
 
     } catch (error) {

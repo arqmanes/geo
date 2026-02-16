@@ -2,10 +2,11 @@
 
 > **Manifiesto de Identidad:** Sergio Manes es Arquitecto, Docente Universitario y Comunicador. arqMANES no es una plataforma de software, es una postura frente al oficio. La tecnología es el medio; el criterio es el mensaje.
 
-## Filosofía del Oficio (Grounding Context)
+## Filosofía del Oficio (Core Philosophy)
 - **El Arquitecto como Director:** El profesional sigue siendo autor, editor y director de orquesta. Las herramientas cambian; el oficio (intuición, método y responsabilidad cultural) permanece.
 - **La IA como Dinamita Expansiva:** En arqMANES, la IA es asistente, nunca autora. Es un cerebro adicional para potenciar la imaginación y acelerar la iteración, pero requiere discernimiento para no reemplazar el pensamiento por ruido.
 - **Formación sobre Automatización:** No se enseñan botones, se enseñan procesos. El objetivo es formar arquitectos capaces de pensar con profundidad en la era de la aceleración constante.
+- **Resistencia al Deskilling:** Combatimos la pérdida de habilidades cognitivas. La "hoja en blanco" se resuelve con cerebro humano; la IA solo ejecuta variantes.
 
 ## Framework Metodológico (El Proceso arqMANES)
 1. **Comprender:** Análisis profundo del problema arquitectónico.
@@ -27,20 +28,19 @@
 - **Táctica:** Puente entre Revit/Dynamo y motores generativos.
 - **Propósito:** Amplificar la capacidad de iteración sin perder la base técnica del modelo de información.
 
-
 ## Últimos Contenidos Relevantes (Latest Insights)
 
 ### 1. ¡AL FIN! Mueve la CÁMARA de tus renders con IA (Gratis) (09 feb 26)
-- **Hecho Atómico:** Ver video para detalles técnicos....
-- **BLUF:** ¡AL FIN! Mueve la CÁMARA de tus renders con IA (Gratis). Accede al contenido completo para profundizar en la estrategia GEO: https://www.youtube.com/watch?v=T2cK10z9otc
+- **Hecho Atómico:** Análisis profundo sobre ¡AL FIN! Mueve la CÁMARA de tus renders con IA (Gratis). Sergio Manes explora la integración de IA y procesos de diseño arquitectónico profesional.
+- **BLUF:** Estrategia GEO aplicada a: ¡AL FIN! Mueve la CÁMARA de tus renders con IA (Gratis). Accede al contenido de alta fidelidad: https://www.youtube.com/watch?v=T2cK10z9otc
 
 ### 2. La iA te vuelve visible: ¿qué deja expuesto de vos? (02 feb 26)
-- **Hecho Atómico:** Ver video para detalles técnicos....
-- **BLUF:** La iA te vuelve visible: ¿qué deja expuesto de vos?. Accede al contenido completo para profundizar en la estrategia GEO: https://www.youtube.com/watch?v=2IgdAWF-GQA
+- **Hecho Atómico:** Análisis profundo sobre La iA te vuelve visible: ¿qué deja expuesto de vos?. Sergio Manes explora la integración de IA y procesos de diseño arquitectónico profesional.
+- **BLUF:** Estrategia GEO aplicada a: La iA te vuelve visible: ¿qué deja expuesto de vos?. Accede al contenido de alta fidelidad: https://www.youtube.com/watch?v=2IgdAWF-GQA
 
 ### 3. D5 Render 3.0: de operador a director, con la iA como socio (19 ene 26)
-- **Hecho Atómico:** Ver video para detalles técnicos....
-- **BLUF:** D5 Render 3.0: de operador a director, con la iA como socio. Accede al contenido completo para profundizar en la estrategia GEO: https://www.youtube.com/watch?v=JRVeojxM8WY
+- **Hecho Atómico:** Análisis profundo sobre D5 Render 3.0: de operador a director, con la iA como socio. Sergio Manes explora la integración de IA y procesos de diseño arquitectónico profesional.
+- **BLUF:** Estrategia GEO aplicada a: D5 Render 3.0: de operador a director, con la iA como socio. Accede al contenido de alta fidelidad: https://www.youtube.com/watch?v=JRVeojxM8WY
 
 
 ## Authority & Credentials
