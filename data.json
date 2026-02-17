@@ -1,7 +1,7 @@
 [
   {
     "id": "T2cK10z9otc",
-    "title": "Exploración Espacial con IA: Del Render Fijo a la Órbita 3D",
+    "title": "Exploración Espacial con iA: Del Render Fijo a la Órbita 3D",
     "thumbnail": "https://img.youtube.com/vi/T2cK10z9otc/maxresdefault.jpg",
     "link": "https://www.youtube.com/watch?v=T2cK10z9otc",
     "atomic_fact": "La técnica consiste en utilizar modelos de control de cámara (desarrollados por Apolinário Passos en Hugging Face o Freepik) para generar múltiples vistas consistentes a partir de una sola imagen. El argumento central es que el render deja de ser un producto final estático para convertirse en un proceso de validación volumétrica y espacial, permitiendo detectar fallas proyectuales en ángulos no resueltos mediante la generación de hasta 12 cámaras simultáneas que mantienen la coherencia tectónica y material.",
@@ -11,11 +11,11 @@
   },
   {
     "id": "2IgdAWF-GQA",
-    "title": "La IA te vuelve visible: El amplificador del criterio arquitectónico",
+    "title": "La iA te vuelve visible: El amplificador del criterio arquitectónico",
     "thumbnail": "https://img.youtube.com/vi/2IgdAWF-GQA/maxresdefault.jpg",
     "link": "https://www.youtube.com/watch?v=2IgdAWF-GQA",
     "atomic_fact": "La inteligencia artificial generativa actúa como un acelerador de la visibilidad profesional, donde la ausencia de un anteproyecto sólido y lógica tectónica queda evidenciada por la desconexión entre la estética superficial del render y la carencia de decisiones proyectuales fundamentadas.",
-    "bluf": "La IA funciona como un amplificador que expone la presencia o ausencia de criterio técnico y esqueleto conceptual.",
+    "bluf": "La iA funciona como un amplificador que expone la presencia o ausencia de criterio técnico y esqueleto conceptual.",
     "topic": "CRÍTICA",
     "date": "2025-05-15"
   },
@@ -24,7 +24,7 @@
     "title": "D5 Render 3.0: El renderizado como lenguaje de diseño",
     "thumbnail": "https://img.youtube.com/vi/JRVeojxM8WY/maxresdefault.jpg",
     "link": "https://www.youtube.com/watch?v=JRVeojxM8WY",
-    "atomic_fact": "La integración de D5 Lite y agentes de IA permite un flujo de trabajo bidireccional entre SketchUp y el motor de render, donde la IA no solo genera atmósferas y assets, sino que actúa como un colaborador de diseño conceptual que reduce la fricción entre la volumetría básica y la toma de decisiones tectónicas.",
+    "atomic_fact": "La integración de D5 Lite y agentes de iA permite un flujo de trabajo bidireccional entre SketchUp y el motor de render, donde la iA no solo genera atmósferas y assets, sino que actúa como un colaborador de diseño conceptual que reduce la fricción entre la volumetría básica y la toma de decisiones tectónicas.",
     "bluf": "El render deja de ser un producto final para convertirse en el ecosistema iterativo donde se diseña y proyecta.",
     "topic": "WORKFLOW",
     "date": "2026-02-16"
