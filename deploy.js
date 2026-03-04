@@ -17,6 +17,8 @@ const EXCLUDES = [
 async function deploy() {
     const client = new ftp.Client();
     client.ftp.verbose = true;
+    // Hostinger can be slow to respond; default 30s is too short
+    client.ftp.socket.setTimeout(60000);
 
     try {
         if (!process.env.FTP_HOST || !process.env.FTP_USER || !process.env.FTP_PASSWORD) {
@@ -26,6 +28,7 @@ async function deploy() {
         console.log('🔌 Conectando a Hostinger via FTPS...');
         await client.access({
             host: process.env.FTP_HOST.replace(/^ftp:\/\//, ''),
+            port: parseInt(process.env.FTP_PORT, 10) || 21,
             user: process.env.FTP_USER,
             password: process.env.FTP_PASSWORD,
             secure: true,
@@ -48,7 +51,7 @@ async function deploy() {
 
             for (const item of items) {
                 if (EXCLUDES.includes(item)) continue;
-                if (item.startsWith('.')) continue; // ignore hidden files/dirs by default except specific ones if needed
+                if (item.startsWith('.') && item !== '.htaccess') continue; // ignore hidden files/dirs by default except .htaccess
 
                 const localPath = path.join(localDir, item);
                 const remotePath = `${remoteDir}/${item}`;
@@ -66,13 +69,14 @@ async function deploy() {
 
         await uploadDirectory(localRoot, remoteRoot);
 
-        console.log('🚀 Despliegue completado con éxito en www.arqmanes.com');
+        console.log('🚀 Despliegue completado con éxito en arqmanes.com');
 
     } catch (err) {
         console.error('❌ Error en el despliegue:', err);
         process.exit(1);
+    } finally {
+        client.close();
     }
-    client.close();
 }
 
 deploy();
