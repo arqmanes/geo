@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos de Uso | arqMANES</title>
+    <meta name="description" content="Términos y condiciones de uso de la plataforma arqMANES.">
+    <link rel="stylesheet" href="./styles.css?v=20260218b">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-green': '#39ff14',
+                        'neon-blue': '#00ffff',
+                        'dark-bg': '#0a0a0a',
+                        'glass-bg': 'rgba(255, 255, 255, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-dark-bg text-white antialiased min-h-screen flex flex-col">
+    <header class="fixed w-full z-50 backdrop-blur-md bg-glass-bg border-b border-white/10 top-0 left-0">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-tighter hover:text-neon-green transition-colors flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-neon-green animate-pulse"></span>
+                arq<span class="text-neon-green">MANES</span>.com
+            </a>
+            <nav class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-400">
+                <a href="index.html#featured" class="hover:text-neon-green">Contenido</a>
+                <a href="index.html#actividades" class="hover:text-neon-green">Actividades</a>
+                <a href="index.html#memoria" class="hover:text-neon-green">Memoria</a>
+                <a href="https://patreon.com/arqmanes" target="_blank" class="text-neon-blue">Patreon</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-32 px-6 container mx-auto max-w-4xl">
+        <section class="py-12">
+            <h1 class="text-4xl md:text-5xl font-black text-neon-green uppercase tracking-tighter mb-8 leading-none">
+                Términos de Uso
+            </h1>
+            
+            <div class="glass-card p-8 md:p-12 rounded-2xl border border-white/10 prose prose-invert max-w-none text-gray-300 font-light leading-relaxed">
+                <p class="mb-6">Bienvenido a <strong>arqMANES.com</strong>. Al acceder y utilizar este sitio web, usted acepta cumplir con los siguientes términos y condiciones de uso.</p>
+                
+                <h2 class="text-xl font-bold text-white uppercase tracking-wider mb-4 mt-8">> 1. ACEPTACIÓN DE LOS TÉRMINOS</h2>
+                <p class="mb-4">El acceso a este sitio web es gratuito y está sujeto a la aceptación de estos términos. Si no está de acuerdo con alguna parte de estos términos, le solicitamos que no utilice nuestro sitio.</p>
+
+                <h2 class="text-xl font-bold text-white uppercase tracking-wider mb-4 mt-8">> 2. PROPIEDAD INTELECTUAL</h2>
+                <p class="mb-4">Todo el contenido disponible en arqMANES.com, incluyendo textos, gráficos, logotipos, videos y software, es propiedad de Sergio Manes o de sus respectivos autores bajo licencia, y está protegido por las leyes de propiedad intelectual.</p>
+
+                <h2 class="text-xl font-bold text-white uppercase tracking-wider mb-4 mt-8">> 3. USO DEL CONTENIDO</h2>
+                <p class="mb-4">Este sitio web está diseñado con fines educativos e informativos sobre arquitectura y tecnología. La "iA No Dirige, Vos Dirigís". El contenido debe ser utilizado con criterio crítico y responsabilidad personal.</p>
+
+                <h2 class="text-xl font-bold text-white uppercase tracking-wider mb-4 mt-8">> 4. LIMITACIÓN DE RESPONSABILIDAD</h2>
+                <p class="mb-4">arqMANES no será responsable de los daños directos o indirectos derivados del uso o de la imposibilidad de uso de los materiales en este sitio, ni de la precisión de la información proporcionada por herramientas de IA externas mencionadas.</p>
+
+                <h2 class="text-xl font-bold text-white uppercase tracking-wider mb-4 mt-8">> 5. MODIFICACIONES</h2>
+                <p class="mb-4">Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios entrarán en vigor inmediatamente después de su publicación en el sitio web.</p>
+
+                <p class="mt-12 text-xs text-gray-500 italic">Última actualización: Marzo 2026</p>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <a href="index.html" class="inline-flex items-center gap-2 text-xs font-bold text-neon-green uppercase tracking-widest hover:text-white transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7 7-7m8 14l-7-7 7-7"/></svg>
+                    Volver al Inicio
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/10 py-12 text-center bg-black/40 backdrop-blur-md mt-12">
+        <p class="text-[10px] text-gray-600 uppercase tracking-widest">&copy; 2026 ARQMANES.COM - SIEMPRE HAY ALGO NUEVO POR APRENDER.</p>
+    </footer>
+</body>
+</html>

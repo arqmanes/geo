@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad | arqMANES</title>
+    <meta name="description" content="Política de privacidad y tratamiento de datos de arqMANES.">
+    <link rel="stylesheet" href="./styles.css?v=20260218b">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-green': '#39ff14',
+                        'neon-blue': '#00ffff',
+                        'dark-bg': '#0a0a0a',
+                        'glass-bg': 'rgba(255, 255, 255, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-dark-bg text-white antialiased min-h-screen flex flex-col">
+    <header class="fixed w-full z-50 backdrop-blur-md bg-glass-bg border-b border-white/10 top-0 left-0">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html"
+                class="text-2xl font-bold tracking-tighter hover:text-neon-green transition-colors flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-neon-green animate-pulse"></span>
+                arq<span class="text-neon-green">MANES</span>.com
+            </a>
+            <nav class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-400">
+                <a href="index.html#featured" class="hover:text-neon-green">Contenido</a>
+                <a href="index.html#actividades" class="hover:text-neon-green">Actividades</a>
+                <a href="index.html#memoria" class="hover:text-neon-green">Memoria</a>
+                <a href="https://patreon.com/arqmanes" target="_blank" class="text-neon-blue">Patreon</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-32 px-6 container mx-auto max-w-4xl">
+        <section class="py-12">
+            <h1 class="text-4xl md:text-5xl font-black text-neon-green uppercase tracking-tighter mb-8 leading-none">
+                Política de Privacidad
+            </h1>
+
+            <div
+                class="glass-card p-8 md:p-12 rounded-2xl border border-white/10 prose prose-invert max-w-none text-gray-300 font-light leading-relaxed">
+                <p class="mb-6">Su privacidad es importante para nosotros. En <strong>arqMANES.com</strong>, respetamos
+                    su privacidad con respecto a cualquier información que podamos recopilar a través de nuestro sitio
+                    web.</p>
+
+                <h2 class="text-xl font-bold text-white uppercase tracking-wider mb-4 mt-8">> 1. INFORMACIÓN QUE
+                    RECOPILAMOS</h2>
+                <p class="mb-4">Solo solicitamos información personal cuando realmente la necesitamos para brindarle un
+                    servicio (como el acceso a través de plataformas de terceros como Patreon o YouTube). Lo hacemos por
+                    medios justos y legales, con su conocimiento y consentimiento.</p>
+
+                <h2 class="text-xl font-bold text-white uppercase tracking-wider mb-4 mt-8">> 2. USO DE COOKIES</h2>
+                <p class="mb-4">Este sitio puede utilizar cookies propias o de terceros para mejorar la experiencia del
+                    usuario y analizar el tráfico (Google Analytics, YouTube, etc.). Usted tiene la opción de configurar
+                    su navegador para ser avisado en pantalla de la recepción de cookies y para impedir la instalación
+                    de cookies en su disco duro.</p>
+
+                <h2 class="text-xl font-bold text-white uppercase tracking-wider mb-4 mt-8">> 3. SERVICIOS DE TERCEROS
+                </h2>
+                <p class="mb-4">Este sitio enlaza a servicios externos como Patreon, YouTube y LinkedIn. No tenemos
+                    control sobre el contenido y las prácticas de estos sitios, y no podemos aceptar responsabilidad por
+                    sus respectivas políticas de privacidad.</p>
+
+                <h2 class="text-xl font-bold text-white uppercase tracking-wider mb-4 mt-8">> 4. SEGURIDAD DE LOS DATOS
+                </h2>
+                <p class="mb-4">Solo retenemos la información recopilada durante el tiempo necesario para proporcionarle
+                    el servicio solicitado. Protegemos los datos almacenados dentro de medios comercialmente aceptables
+                    para evitar pérdidas y robos, así como el acceso, divulgación, copia, uso o modificación no
+                    autorizados.</p>
+
+                <h2 class="text-xl font-bold text-white uppercase tracking-wider mb-4 mt-8">> 5. CONSENTIMIENTO</h2>
+                <p class="mb-4">El uso continuado de nuestro sitio web será considerado como una aceptación de nuestras
+                    prácticas en torno a la privacidad y la información personal.</p>
+
+                <p class="mt-12 text-xs text-gray-500 italic">Última actualización: Marzo 2026</p>
+            </div>
+
+            <div class="mt-8 text-center">
+                <a href="index.html"
+                    class="inline-flex items-center gap-2 text-xs font-bold text-neon-green uppercase tracking-widest hover:text-white transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 19l-7-7 7-7m8 14l-7-7 7-7" />
+                    </svg>
+                    Volver al Inicio
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/10 py-12 text-center bg-black/40 backdrop-blur-md mt-12">
+        <p class="text-[10px] text-gray-600 uppercase tracking-widest">&copy; 2026 ARQMANES.COM - SIEMPRE HAY ALGO NUEVO
+            POR APRENDER.</p>
+    </footer>
+</body>
+
+</html>

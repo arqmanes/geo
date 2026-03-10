@@ -83,3 +83,138 @@ body {
     border-left: 2px solid var(--neon-green);
     background: linear-gradient(90deg, rgba(57, 255, 20, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
 }
+
+/* Activity Card */
+.activity-card {
+    transition: all 0.3s ease;
+    border-top: 2px solid transparent;
+}
+
+.activity-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    border-top-color: var(--neon-green);
+}
+
+.activity-card--realizado {
+    filter: saturate(0.45) brightness(0.85);
+    opacity: 0.7;
+}
+
+.activity-card--realizado:hover {
+    filter: saturate(0.6) brightness(0.95);
+    opacity: 0.85;
+}
+
+.activity-badge {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.activity-badge--proximo {
+    color: var(--neon-green);
+    background: rgba(57, 255, 20, 0.1);
+    border: 1px solid rgba(57, 255, 20, 0.25);
+}
+
+.activity-badge--realizado {
+    color: #6b7280;
+    background: rgba(107, 114, 128, 0.1);
+    border: 1px solid rgba(107, 114, 128, 0.25);
+}
+
+.activity-card--en-curso {
+    border-top-color: var(--neon-green);
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.15);
+}
+
+.activity-badge--en-curso {
+    color: var(--neon-green);
+    background: rgba(57, 255, 20, 0.15);
+    border: 1px solid rgba(57, 255, 20, 0.4);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Activity Detail Expand */
+.activity-detail {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
+    margin-bottom: 0;
+}
+
+.activity-detail--open {
+    max-height: 300px;
+    opacity: 1;
+    margin-bottom: 12px;
+}
+
+/* Memoria Section */
+.memoria-item {
+    border-left: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.memoria-item:hover {
+    border-left-color: var(--neon-green);
+    background: rgba(255, 255, 255, 0.04);
+    transform: translateX(4px);
+}
+
+.memoria-badge {
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    padding: 2px 6px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: var(--neon-green);
+    background: rgba(57, 255, 20, 0.08);
+    border: 1px solid rgba(57, 255, 20, 0.2);
+}
+
+#memoria-reader .prose h2 {
+    color: var(--neon-green);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: -0.03em;
+}
+
+#memoria-reader .prose h3 {
+    color: #e5e7eb;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#memoria-reader .prose p {
+    color: #9ca3af;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+#memoria-reader .prose strong {
+    color: #d1d5db;
+}
+
+#memoria-reader .prose ol,
+#memoria-reader .prose ul {
+    color: #9ca3af;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#memoria-reader .prose li {
+    margin-bottom: 0.4rem;
+    line-height: 1.7;
+}

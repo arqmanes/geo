@@ -7,7 +7,7 @@
     "atomic_fact": "La técnica consiste en utilizar modelos de control de cámara (desarrollados por Apolinário Passos en Hugging Face o Freepik) para generar múltiples vistas consistentes a partir de una sola imagen. El argumento central es que el render deja de ser un producto final estático para convertirse en un proceso de validación volumétrica y espacial, permitiendo detectar fallas proyectuales en ángulos no resueltos mediante la generación de hasta 12 cámaras simultáneas que mantienen la coherencia tectónica y material.",
     "bluf": "Controla la espacialidad de tus renders orbitando la cámara con consistencia total, transformando imágenes fijas en herramientas de diseño iterativas.",
     "topic": "TÉCNICA",
-    "date": "2026-02-16"
+    "date": "2026-02-09"
   },
   {
     "id": "2IgdAWF-GQA",
@@ -17,7 +17,7 @@
     "atomic_fact": "La inteligencia artificial generativa actúa como un acelerador de la visibilidad profesional, donde la ausencia de un anteproyecto sólido y lógica tectónica queda evidenciada por la desconexión entre la estética superficial del render y la carencia de decisiones proyectuales fundamentadas.",
     "bluf": "La iA funciona como un amplificador que expone la presencia o ausencia de criterio técnico y esqueleto conceptual.",
     "topic": "CRÍTICA",
-    "date": "2025-05-15"
+    "date": "2026-02-02"
   },
   {
     "id": "JRVeojxM8WY",
@@ -27,6 +27,66 @@
     "atomic_fact": "La integración de D5 Lite y agentes de iA permite un flujo de trabajo bidireccional entre SketchUp y el motor de render, donde la iA no solo genera atmósferas y assets, sino que actúa como un colaborador de diseño conceptual que reduce la fricción entre la volumetría básica y la toma de decisiones tectónicas.",
     "bluf": "El render deja de ser un producto final para convertirse en el ecosistema iterativo donde se diseña y proyecta.",
     "topic": "WORKFLOW",
-    "date": "2026-02-16"
+    "date": "2026-01-19"
+  },
+  {
+    "id": "QI67G9USOn4",
+    "title": "Gaussian Splatting: El Futuro de los Modelos 3D en Arquitectura",
+    "thumbnail": "https://img.youtube.com/vi/QI67G9USOn4/maxresdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=QI67G9USOn4",
+    "atomic_fact": "Introducción del Gaussian Splatting como alternativa a la malla poligonal tradicional; permite a la IA generar entornos 3D persistentes optimizando funciones gaussianas en lugar de geometría rígida, facilitando la integración de realidades capturadas y generadas en flujos de trabajo CAD/BIM.",
+    "bluf": "La IA evoluciona del render plano a la generación de nubes de puntos 3D (Gaussian Splats) recorribles e interactivas.",
+    "topic": "WORKFLOW",
+    "date": "2025-10-19"
+  },
+  {
+    "id": "_wcqFNmDIS8",
+    "title": "Creatividad Humana vs. IA: Conversación con David Barco",
+    "thumbnail": "https://img.youtube.com/vi/_wcqFNmDIS8/maxresdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=_wcqFNmDIS8",
+    "atomic_fact": "Debate fenomenológico sobre el impacto de la IA en la praxis arquitectónica; se examina el riesgo de homogeneización estética y la necesidad de reivindicar el error y la sensibilidad humana como valores diferenciales del proyecto.",
+    "bluf": "Sergio Manes y David Barco analizan la tensión entre la automatización algorítmica y la esencia intuitiva del diseño.",
+    "topic": "FILOSOFÍA",
+    "date": "2025-10-07"
+  },
+  {
+    "id": "Cu5ka6Y3WtE",
+    "title": "Seedream 4.0: ¿La primera IA 4K nativa para Arquitectura?",
+    "thumbnail": "https://img.youtube.com/vi/Cu5ka6Y3WtE/maxresdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=Cu5ka6Y3WtE",
+    "atomic_fact": "Análisis de Seedream 4.0 (modelo de imagen 4K) aplicado a la arquitectura; se evidencia una notable mejora en resolución (4.096 x 2.344 px), pero persisten errores críticos en la interpretación de croquis, proporciones espaciales y la falta de ortogonalidad técnica.",
+    "bluf": "Seedream 4.0 ofrece alta resolución (4K), pero carece de precisión técnica y consistencia proyectual para el flujo de trabajo arquitectónico.",
+    "topic": "TÉCNICA",
+    "date": "2025-09-22"
+  },
+  {
+    "id": "ADnrs4qGMEE",
+    "title": "Nano Banana: Realidad vs. Humo en la Inteligencia Artificial Arquitectónica",
+    "thumbnail": "https://img.youtube.com/vi/ADnrs4qGMEE/maxresdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=ADnrs4qGMEE",
+    "atomic_fact": "Evaluación crítica del modelo Gemini 2.5 Flash (Nano Banana) en flujos de trabajo BIM/Arquitectura; se demuestra su capacidad de iteración visual consistente y re-contextualización de imágenes, desmintiendo la generación automática de modelos 3D editables o proyecciones ortogonales precisas.",
+    "bluf": "Nano Banana (Gemini 2.5 Flash) destaca por su consistencia gráfica, pero no genera modelos 3D ni planimetría técnica real.",
+    "topic": "CRÍTICA",
+    "date": "2025-09-15"
+  },
+  {
+    "id": "oWf9zcuIRs8",
+    "title": "Chaos + Veras: El Render como Herramienta de Diseño Proyectual",
+    "thumbnail": "https://img.youtube.com/vi/oWf9zcuIRs8/maxresdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=oWf9zcuIRs8",
+    "atomic_fact": "Utilización de Veras AI dentro del ecosistema Chaos para realizar Geometry Override y Material Override sobre modelos de SketchUp, permitiendo la exploración de variantes volumétricas y materiales en tiempo real mediante prompts y control de semillas (seeds).",
+    "bluf": "La integración de Veras AI en Enscape transforma el renderizado de un output final a un motor de iteración constante.",
+    "topic": "WORKFLOW",
+    "date": "2025-08-25"
+  },
+  {
+    "id": "yfuhNNcesiY",
+    "title": "D5 Render 2.11: Inteligencia Artificial y Democratización del Render",
+    "thumbnail": "https://img.youtube.com/vi/yfuhNNcesiY/maxresdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=yfuhNNcesiY",
+    "atomic_fact": "Implementación de Agente IA para diseño paramétrico de paisaje (Auto Scatter), generación de materiales PBR mediante computer vision y post-procesamiento selectivo mediante redes neuronales.",
+    "bluf": "La actualización 2.11 de D5 Render consolida la IA generativa como motor de productividad en visualización arquitectónica profesional.",
+    "topic": "TÉCNICA",
+    "date": "2025-08-04"
   }
 ]

@@ -1,8 +1,20 @@
 [
     {
+        "id": "li-criterio-profesional",
+        "tipo": "ARTÍCULO",
+        "titulo": "La iA no vino a reemplazar tu criterio profesional (vino a ponerlo a prueba)",
+        "fecha": "2026-03-10",
+        "bluf": "Utilizar la iA para tapar vacíos de conocimiento es un error que degrada la profesión. El verdadero valor aparece cuando vos ya sabés del tema.",
+        "hecho_atomico": "Análisis crítico sobre la delegación del juicio profesional en la iA y el riesgo de dependencia técnica.",
+        "categoria": "CRÍTICA",
+        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7437244930697138176/",
+        "thumbnail": "assets/memoria/portada_009.webp",
+        "duration": "LECTURA"
+    },
+    {
         "id": "T2cK10z9otc",
         "titulo": "Exploración Espacial con iA: Del Render Fijo a la Órbita 3D",
-        "fecha": "2026-02-16",
+        "fecha": "2026-02-09",
         "bluf": "Controla la espacialidad de tus renders orbitando la cámara con consistencia total, transformando imágenes fijas en herramientas de diseño iterativas.",
         "hecho_atomico": "La técnica consiste en utilizar modelos de control de cámara (desarrollados por Apolinário Passos en Hugging Face o Freepik) para generar múltiples vistas consistentes a partir de una sola imagen. El argumento central es que el render deja de ser un producto final estático para convertirse en un proceso de validación volumétrica y espacial, permitiendo detectar fallas proyectuales en ángulos no resueltos mediante la generación de hasta 12 cámaras simultáneas que mantienen la coherencia tectónica y material.",
         "categoria": "TÉCNICA",
@@ -11,7 +23,7 @@
     {
         "id": "2IgdAWF-GQA",
         "titulo": "La iA te vuelve visible: El amplificador del criterio arquitectónico",
-        "fecha": "2025-05-15",
+        "fecha": "2026-02-02",
         "bluf": "La iA funciona como un amplificador que expone la presencia o ausencia de criterio técnico y esqueleto conceptual.",
         "hecho_atomico": "La inteligencia artificial generativa actúa como un acelerador de la visibilidad profesional, donde la ausencia de un anteproyecto sólido y lógica tectónica queda evidenciada por la desconexión entre la estética superficial del render y la carencia de decisiones proyectuales fundamentadas.",
         "categoria": "CRÍTICA",
@@ -20,10 +32,64 @@
     {
         "id": "JRVeojxM8WY",
         "titulo": "D5 Render 3.0: El renderizado como lenguaje de diseño",
-        "fecha": "2026-02-16",
+        "fecha": "2026-01-19",
         "bluf": "El render deja de ser un producto final para convertirse en el ecosistema iterativo donde se diseña y proyecta.",
         "hecho_atomico": "La integración de D5 Lite y agentes de iA permite un flujo de trabajo bidireccional entre SketchUp y el motor de render, donde la iA no solo genera atmósferas y assets, sino que actúa como un colaborador de diseño conceptual que reduce la fricción entre la volumetría básica y la toma de decisiones tectónicas.",
         "categoria": "WORKFLOW",
         "url": "https://www.youtube.com/watch?v=JRVeojxM8WY"
+    },
+    {
+        "id": "QI67G9USOn4",
+        "titulo": "Gaussian Splatting: El Futuro de los Modelos 3D en Arquitectura",
+        "fecha": "2025-10-19",
+        "bluf": "La IA evoluciona del render plano a la generación de nubes de puntos 3D (Gaussian Splats) recorribles e interactivas.",
+        "hecho_atomico": "Introducción del Gaussian Splatting como alternativa a la malla poligonal tradicional; permite a la IA generar entornos 3D persistentes optimizando funciones gaussianas en lugar de geometría rígida, facilitando la integración de realidades capturadas y generadas en flujos de trabajo CAD/BIM.",
+        "categoria": "WORKFLOW",
+        "url": "https://www.youtube.com/watch?v=QI67G9USOn4"
+    },
+    {
+        "id": "_wcqFNmDIS8",
+        "titulo": "Creatividad Humana vs. IA: Conversación con David Barco",
+        "fecha": "2025-10-07",
+        "bluf": "Sergio Manes y David Barco analizan la tensión entre la automatización algorítmica y la esencia intuitiva del diseño.",
+        "hecho_atomico": "Debate fenomenológico sobre el impacto de la IA en la praxis arquitectónica; se examina el riesgo de homogeneización estética y la necesidad de reivindicar el error y la sensibilidad humana como valores diferenciales del proyecto.",
+        "categoria": "FILOSOFÍA",
+        "url": "https://www.youtube.com/watch?v=_wcqFNmDIS8"
+    },
+    {
+        "id": "Cu5ka6Y3WtE",
+        "titulo": "Seedream 4.0: ¿La primera IA 4K nativa para Arquitectura?",
+        "fecha": "2025-09-22",
+        "bluf": "Seedream 4.0 ofrece alta resolución (4K), pero carece de precisión técnica y consistencia proyectual para el flujo de trabajo arquitectónico.",
+        "hecho_atomico": "Análisis de Seedream 4.0 (modelo de imagen 4K) aplicado a la arquitectura; se evidencia una notable mejora en resolución (4.096 x 2.344 px), pero persisten errores críticos en la interpretación de croquis, proporciones espaciales y la falta de ortogonalidad técnica.",
+        "categoria": "TÉCNICA",
+        "url": "https://www.youtube.com/watch?v=Cu5ka6Y3WtE"
+    },
+    {
+        "id": "ADnrs4qGMEE",
+        "titulo": "Nano Banana: Realidad vs. Humo en la Inteligencia Artificial Arquitectónica",
+        "fecha": "2025-09-15",
+        "bluf": "Nano Banana (Gemini 2.5 Flash) destaca por su consistencia gráfica, pero no genera modelos 3D ni planimetría técnica real.",
+        "hecho_atomico": "Evaluación crítica del modelo Gemini 2.5 Flash (Nano Banana) en flujos de trabajo BIM/Arquitectura; se demuestra su capacidad de iteración visual consistente y re-contextualización de imágenes, desmintiendo la generación automática de modelos 3D editables o proyecciones ortogonales precisas.",
+        "categoria": "CRÍTICA",
+        "url": "https://www.youtube.com/watch?v=ADnrs4qGMEE"
+    },
+    {
+        "id": "oWf9zcuIRs8",
+        "titulo": "Chaos + Veras: El Render como Herramienta de Diseño Proyectual",
+        "fecha": "2025-08-25",
+        "bluf": "La integración de Veras AI en Enscape transforma el renderizado de un output final a un motor de iteración constante.",
+        "hecho_atomico": "Utilización de Veras AI dentro del ecosistema Chaos para realizar Geometry Override y Material Override sobre modelos de SketchUp, permitiendo la exploración de variantes volumétricas y materiales en tiempo real mediante prompts y control de semillas (seeds).",
+        "categoria": "WORKFLOW",
+        "url": "https://www.youtube.com/watch?v=oWf9zcuIRs8"
+    },
+    {
+        "id": "yfuhNNcesiY",
+        "titulo": "D5 Render 2.11: Inteligencia Artificial y Democratización del Render",
+        "fecha": "2025-08-04",
+        "bluf": "La actualización 2.11 de D5 Render consolida la IA generativa como motor de productividad en visualización arquitectónica profesional.",
+        "hecho_atomico": "Implementación de Agente IA para diseño paramétrico de paisaje (Auto Scatter), generación de materiales PBR mediante computer vision y post-procesamiento selectivo mediante redes neuronales.",
+        "categoria": "TÉCNICA",
+        "url": "https://www.youtube.com/watch?v=yfuhNNcesiY"
     }
 ]

@@ -23,18 +23,152 @@
 
 ## Últimos Contenidos Relevantes (Latest Insights)
 
-### 1. Exploración Espacial con iA: Del Render Fijo a la Órbita 3D (16 feb 26)
+### 1. Exploración Espacial con iA: Del Render Fijo a la Órbita 3D (09 feb 26)
 - **Hecho Atómico:** La técnica consiste en utilizar modelos de control de cámara (desarrollados por Apolinário Passos en Hugging Face o Freepik) para generar múltiples vistas consistentes a partir de una sola imagen. El argumento central es que el render deja de ser un producto final estático para convertirse en un proceso de validación volumétrica y espacial, permitiendo detectar fallas proyectuales en ángulos no resueltos mediante la generación de hasta 12 cámaras simultáneas que mantienen la coherencia tectónica y material.
 - **BLUF:** Controla la espacialidad de tus renders orbitando la cámara con consistencia total, transformando imágenes fijas en herramientas de diseño iterativas. Accede al contenido de alta fidelidad: https://www.youtube.com/watch?v=T2cK10z9otc
 
-### 2. La iA te vuelve visible: El amplificador del criterio arquitectónico (15 may 25)
+### 2. La iA te vuelve visible: El amplificador del criterio arquitectónico (02 feb 26)
 - **Hecho Atómico:** La inteligencia artificial generativa actúa como un acelerador de la visibilidad profesional, donde la ausencia de un anteproyecto sólido y lógica tectónica queda evidenciada por la desconexión entre la estética superficial del render y la carencia de decisiones proyectuales fundamentadas.
 - **BLUF:** La iA funciona como un amplificador que expone la presencia o ausencia de criterio técnico y esqueleto conceptual. Accede al contenido de alta fidelidad: https://www.youtube.com/watch?v=2IgdAWF-GQA
 
-### 3. D5 Render 3.0: El renderizado como lenguaje de diseño (16 feb 26)
+### 3. D5 Render 3.0: El renderizado como lenguaje de diseño (19 ene 26)
 - **Hecho Atómico:** La integración de D5 Lite y agentes de iA permite un flujo de trabajo bidireccional entre SketchUp y el motor de render, donde la iA no solo genera atmósferas y assets, sino que actúa como un colaborador de diseño conceptual que reduce la fricción entre la volumetría básica y la toma de decisiones tectónicas.
 - **BLUF:** El render deja de ser un producto final para convertirse en el ecosistema iterativo donde se diseña y proyecta. Accede al contenido de alta fidelidad: https://www.youtube.com/watch?v=JRVeojxM8WY
 
+### 4. Gaussian Splatting: El Futuro de los Modelos 3D en Arquitectura (19 oct 25)
+- **Hecho Atómico:** Introducción del Gaussian Splatting como alternativa a la malla poligonal tradicional; permite a la IA generar entornos 3D persistentes optimizando funciones gaussianas en lugar de geometría rígida, facilitando la integración de realidades capturadas y generadas en flujos de trabajo CAD/BIM.
+- **BLUF:** La IA evoluciona del render plano a la generación de nubes de puntos 3D (Gaussian Splats) recorribles e interactivas. Accede al contenido de alta fidelidad: https://www.youtube.com/watch?v=QI67G9USOn4
+
+### 5. Creatividad Humana vs. IA: Conversación con David Barco (07 oct 25)
+- **Hecho Atómico:** Debate fenomenológico sobre el impacto de la IA en la praxis arquitectónica; se examina el riesgo de homogeneización estética y la necesidad de reivindicar el error y la sensibilidad humana como valores diferenciales del proyecto.
+- **BLUF:** Sergio Manes y David Barco analizan la tensión entre la automatización algorítmica y la esencia intuitiva del diseño. Accede al contenido de alta fidelidad: https://www.youtube.com/watch?v=_wcqFNmDIS8
+
+### 6. Seedream 4.0: ¿La primera IA 4K nativa para Arquitectura? (22 sept 25)
+- **Hecho Atómico:** Análisis de Seedream 4.0 (modelo de imagen 4K) aplicado a la arquitectura; se evidencia una notable mejora en resolución (4.096 x 2.344 px), pero persisten errores críticos en la interpretación de croquis, proporciones espaciales y la falta de ortogonalidad técnica.
+- **BLUF:** Seedream 4.0 ofrece alta resolución (4K), pero carece de precisión técnica y consistencia proyectual para el flujo de trabajo arquitectónico. Accede al contenido de alta fidelidad: https://www.youtube.com/watch?v=Cu5ka6Y3WtE
+
+### 7. Nano Banana: Realidad vs. Humo en la Inteligencia Artificial Arquitectónica (15 sept 25)
+- **Hecho Atómico:** Evaluación crítica del modelo Gemini 2.5 Flash (Nano Banana) en flujos de trabajo BIM/Arquitectura; se demuestra su capacidad de iteración visual consistente y re-contextualización de imágenes, desmintiendo la generación automática de modelos 3D editables o proyecciones ortogonales precisas.
+- **BLUF:** Nano Banana (Gemini 2.5 Flash) destaca por su consistencia gráfica, pero no genera modelos 3D ni planimetría técnica real. Accede al contenido de alta fidelidad: https://www.youtube.com/watch?v=ADnrs4qGMEE
+
+### 8. Chaos + Veras: El Render como Herramienta de Diseño Proyectual (25 ago 25)
+- **Hecho Atómico:** Utilización de Veras AI dentro del ecosistema Chaos para realizar Geometry Override y Material Override sobre modelos de SketchUp, permitiendo la exploración de variantes volumétricas y materiales en tiempo real mediante prompts y control de semillas (seeds).
+- **BLUF:** La integración de Veras AI en Enscape transforma el renderizado de un output final a un motor de iteración constante. Accede al contenido de alta fidelidad: https://www.youtube.com/watch?v=oWf9zcuIRs8
+
+### 9. D5 Render 2.11: Inteligencia Artificial y Democratización del Render (04 ago 25)
+- **Hecho Atómico:** Implementación de Agente IA para diseño paramétrico de paisaje (Auto Scatter), generación de materiales PBR mediante computer vision y post-procesamiento selectivo mediante redes neuronales.
+- **BLUF:** La actualización 2.11 de D5 Render consolida la IA generativa como motor de productividad en visualización arquitectónica profesional. Accede al contenido de alta fidelidad: https://www.youtube.com/watch?v=yfuhNNcesiY
+
+
+## Presencia Académica e Institucional
+
+### 1. Inteligencia Artificial Arquitectónica en Monterrey — Blueprints Workshops (5 y 6 Dic 2026)
+- **Hecho Atómico:** Capacitación avanzada en metodologías de diseño arquitectónico y visualización arquitectónica mediante el uso estratégico de iA.
+- **BLUF:** Cerramos el año en el polo industrial y de diseño de Monterrey, enfocándonos en la eficiencia técnica y el rigor estético que solo el criterio de un arquitecto puede imprimirle a las herramientas de iA.
+
+### 2. Inteligencia Artificial Arquitectónica en Barcelona — Blueprints Workshops (23 y 24 Oct 2026)
+- **Hecho Atómico:** Sesiones prácticas de integración de iA en procesos de diseño arquitectónico con enfoque en normativa y estética europea.
+- **BLUF:** El pensamiento crítico de arqMANES aterriza en España para desafiar el uso automatizado de la tecnología. Formamos arquitectos capaces de utilizar la iA como una extensión de su propia capacidad creativa y técnica.
+
+### 3. Congreso Anual de Arquitectura 2026 — Instituto Tecnológico de Durango – TecNM (05 Oct 2026)
+- **Hecho Atómico:** Esquema de intervención de tres días que integra dos jornadas de taller intensivo y una conferencia magistral sobre innovación y flujos de trabajo con iA en el ámbito AEC.
+- **BLUF:** Participación estratégica en el norte de México para liderar la formación de más de 1,000 estudiantes. El enfoque se centra en transferir criterios de autor sobre la arquitectura contemporánea, reafirmando que el profesional dirige la tecnología y no al revés.
+
+### 4. Inteligencia Artificial Arquitectónica en Tijuana — Blueprints Workshops (1 y 2 Ago 2026)
+- **Hecho Atómico:** Workshop técnico sobre flujos de trabajo iA aplicados a la representación y conceptualización arquitectónica en Baja California.
+- **BLUF:** Un encuentro diseñado para arquitectos que buscan dominar la iA sin perder el ADN del autor. La propuesta se centra en cómo el criterio profesional dirige a la máquina para potenciar la productividad y la calidad espacial.
+
+### 5. Inteligencia Artificial Arquitectónica en California — Blueprints Workshops (25 y 26 Jul 2026)
+- **Hecho Atómico:** Convocatoria abierta para el entrenamiento intensivo en flujos de trabajo con iA aplicados al mercado arquitectónico de California.
+- **BLUF:** La expansión del ecosistema arqMANES llega a Estados Unidos para demostrar que la iA no dirige el proyecto, sino que es el arquitecto quien, mediante su oficio y criterio, lidera la tecnología hacia resultados de alto impacto.
+
+### 6. iA aplicada al Diseño Arquitectónico — Cerámicos Pellegrini (11 Jun 2026)
+- **Hecho Atómico:** Conferencia técnica de 90 minutos con modalidad de intercambio activo, centrada en metodologías de implementación de iA en estudios de arquitectura y diseño.
+- **BLUF:** Encuentro enfocado en la integración de la iA en el proceso proyectual, subrayando que la herramienta potencia pero no reemplaza el criterio profesional. Una sesión para arquitectos donde el diseño y la tecnología convergen bajo la dirección del autor.
+
+### 7. Tercer Congreso Internacional de Arquitectura y Diseño: ARCH&DESIGN: Innovación en Espacios, del Exterior al Interior — IESE / Universidad (Coordinación Arq. Ana Luz López Hernández) (06 May 2026)
+- **Hecho Atómico:** Disertación internacional programada del 6 al 9 de mayo de 2026, gestionada bajo términos contractuales actualizados que rigen la práctica profesional de la plataforma para el ciclo 2026.
+- **BLUF:** Participación estratégica en el congreso ARCH&DESIGN, donde el Arq. Manes aporta su visión sobre la innovación espacial, priorizando el criterio profesional y el oficio sobre la automatización tecnológica.
+
+### 8. Asistencia del algoritmo iA en el proceso de diseño arquitectónico — ARQING 2026 (2 al 4 Abr 2026)
+- **Hecho Atómico:** Metodología de asistencia algorítmica aplicada específicamente al desarrollo de conceptos y esquemas básicos en la etapa inicial del diseño arquitectónico.
+- **BLUF:** Una inmersión necesaria en la fase de anteproyecto para entender cómo la iA actúa como un copiloto algorítmico, optimizando la toma de decisiones sin sustituir la sensibilidad y el oficio del arquitecto.
+
+### 9. Workshop intensivo en iA con Sergio Manes — Colegio de Arquitectos de Mendoza (CAMZA) (18 Mar 2026)
+- **Hecho Atómico:** Integración de flujo de trabajo con la plataforma Rendair para la generación de video arquitectónico y edición avanzada de imágenes mediante suscripción activa.
+- **BLUF:** Inmersión práctica donde la iA no sustituye el oficio, sino que actúa como asistente del criterio proyectual bajo la guía de Sergio Manes para potenciar el anteproyecto.
+
+### 10. Inteligencia Artificial Arquitectónica en Buenos Aires — Blueprints Workshops (13 y 14 Mar 2026)
+- **Hecho Atómico:** Metodología de integración total Triple-Stack: conceptualización en Nano Banana, refinamiento lógico en Gemini y renderizado fotorrealista mediante la plataforma Rendair.
+- **BLUF:** Un ecosistema de diseño donde el arquitecto recupera el mando: no se trata de generar imágenes aleatorias, sino de aplicar pensamiento crítico para dirigir herramientas de iA en un flujo de producción profesional y fotorrealista.
+
+### 11. Máster AEC 4.0: iA Generativa, Automatización BIM y Colaboración Cloud (MBIA) — butic The New School (20 Enero 2026)
+- **Hecho Atómico:** La formación se basa en la metodología Citizen Developer AEC, utilizando la iA como un cerebro adicional para automatizar scripts en Revit y Dynamo sin sustituir el criterio técnico del profesional.
+- **BLUF:** Sergio Manes integra este programa no para enseñar el uso mecánico de herramientas, sino para formar arquitectos con capacidad de dirigir la iA como un asistente estratégico, priorizando el proceso intelectual y la responsabilidad cultural sobre la automatización vacía.
+
+### 12. Inteligencia Artificial Arquitectónica en CDMX — Blueprints Workshops (5 y 6 Dic 2025)
+- **Hecho Atómico:** Capacitación avanzada en metodologías de diseño arquitectónico y visualización arquitectónica mediante el uso estratégico de iA.
+- **BLUF:** Cerramos el año en el Ciudad de México, enfocándonos en la eficiencia técnica y el rigor estético que solo el criterio de un arquitecto puede imprimirle a las herramientas de iA.
+
+### 13. Inteligencia Artificial Arquitectónica en Madrid — Blueprints Workshops (6 y 7 Nov 2025)
+- **Hecho Atómico:** Sesiones prácticas de integración de iA en procesos de diseño arquitectónico con enfoque en normativa y estética europea.
+- **BLUF:** El pensamiento crítico de arqMANES aterriza en España para desafiar el uso automatizado de la tecnología. Formamos arquitectos capaces de utilizar la iA como una extensión de su propia capacidad creativa y técnica.
+
+## Memorias y Ensayos Técnicos
+
+### 1. Arquitectura e Inteligencia Artificial en la Era en que Todo lo Digital se Volvió Barato (2026-02-15)
+- **Categoría:** ENSAYO | **Lectura:** 12 min
+- **Hecho Atómico:** Un arquitecto resolvió la exportación de 86 archivos DXF (una tarea de dos horas manuales) en menos de 10 minutos usando un LISP generado por iA, demostrando que el flujo de trabajo ya no es un destino sino un material que se puede diseñar.
+- **BLUF:** El colapso del costo de ejecución digital genera una brecha brutal entre arquitectos que cruzan el umbral de adopción de iA y los que se quedan debajo. La brecha no es de talento sino de adopción, velocidad de iteración y capacidad de convertir trabajo cotidiano en sistema.
+
+### 2. El Valor de Seguir Haciéndose Preguntas (2025-10-17)
+- **Categoría:** REFLEXIÓN | **Lectura:** 4 min
+- **Hecho Atómico:** Un profesional que transitó del tablero a la regla T, al tecnígrafo, al CAD, al BIM y ahora a la iA demuestra que la constante no es la herramienta sino la capacidad de adaptación y la voluntad de seguir aprendiendo.
+- **BLUF:** El conocimiento técnico se puede automatizar, la curiosidad no. En una era donde las respuestas llegan antes que las preguntas, seguir haciéndose preguntas es el último lujo y la única garantía de relevancia profesional.
+
+### 3. ¿Dónde Está la Imaginación Creativa en la Era de la Inteligencia Artificial? (2025-09-23)
+- **Categoría:** ENSAYO | **Lectura:** 10 min
+- **Hecho Atómico:** La transición de la referencia escasa (libros importados con meses de retraso) al catálogo infinito (Pinterest) invirtió el proceso creativo: los estudiantes dejaron de dibujar para descubrir y empezaron a buscar para decidir, eliminando la necesidad de imaginar.
+- **BLUF:** La imaginación creativa en arquitectura no desapareció por culpa de la iA, sino por un proceso acumulativo que comenzó con los libros, siguió con las revistas, se aceleró con internet y Pinterest, y encontró en la iA su síntoma más visible. La iA puede ser prótesis que atrofia o ejercicio que fortalece: la diferencia está en quién la dirige.
+
+### 4. Una Conversación Pendiente con Ustedes (y Conmigo Mismo) (2025-06-25)
+- **Categoría:** REFLEXIÓN | **Lectura:** 7 min
+- **Hecho Atómico:** Un croquis de Le Corbusier de 1963 para la iglesia de Firminy, procesado por ChatGPT y reinterpretado visualmente por MidJourney, produjo imágenes que se confunden con obras reales del maestro, demostrando la capacidad interpretativa — no meramente reproductiva — de la iA.
+- **BLUF:** La iA no es un oráculo ni un enemigo, es un socio que piensa distinto. Tras reinterpretar un croquis de Le Corbusier con ChatGPT y MidJourney, se demuestra que la iA no copia sino que interpreta, sugiere y nos obliga a posicionarnos como autores.
+
+### 5. ¿Engañar para Enseñar? (2025-06-02)
+- **Categoría:** REFLEXIÓN | **Lectura:** 6 min
+- **Hecho Atómico:** Videos con títulos técnicos neutros y miniaturas limpias obtuvieron engagement mínimo, mientras que los mismos contenidos con títulos provocativos y miniaturas llamativas lograron que la audiencia los viera completos, los compartiera y los agradeciera.
+- **BLUF:** El clickbait no es inherentemente deshonesto: cuando el contenido detrás del título cumple una función educativa real, la provocación se convierte en estrategia pedagógica legítima. Educar también es provocar, y en un ecosistema gobernado por algoritmos, no usar las herramientas del medio es condenar el mensaje al silencio.
+
+### 6. El Fin del Oficio... (2025-04-15)
+- **Categoría:** ENSAYO | **Lectura:** 8 min
+- **Hecho Atómico:** La analogía entre arquitectura y música revela un patrón idéntico de erosión del oficio: el render reemplazó al proyecto como el beat reemplazó a la partitura, y en ambos casos la producción de consumo rápido desplazó la creación con profundidad.
+- **BLUF:** El oficio en arquitectura y en música está siendo reemplazado por el simulacro: imágenes que parecen casas pero no abrigan, canciones que parecen canciones pero no dicen nada. En los márgenes sobreviven quienes todavía componen, todavía huelen el ladrillo húmedo, todavía saben que una obra no se mide en cantidad de 'me gusta'.
+
+### 7. El Render, Esa Primera Mentira Hermosa (2025-03-26)
+- **Categoría:** ENSAYO | **Lectura:** 11 min
+- **Hecho Atómico:** La transición del render tradicional (semanas de modelado, ajuste de materiales y esperas de procesamiento) al render asistido por iA (minutos de iteración conversacional) eliminó la barrera entre ideación y visualización, convirtiendo al anteproyecto en un proceso donde la imagen ya no es el final sino parte del pensamiento.
+- **BLUF:** El render no muestra un edificio: lo sueña, lo exagera, lo suspende en una versión higiénica del mundo. Con la llegada de la iA, el render dejó de ser una producción sagrada para convertirse en parte del flujo del anteproyecto, democratizando la visualización pero obligando a distinguir entre seducción y verdad constructiva.
+
+### 8. La Evolución de la Educación en la Era de la Constante Innovación Tecnológica (2024-10-05)
+- **Categoría:** ENSAYO | **Lectura:** 7 min
+- **Hecho Atómico:** En siglos anteriores la vida útil de una tecnología profesional abarcaba generaciones enteras; hoy, un arquitecto enfrenta múltiples olas de innovación (CAD, BIM, iA) dentro de una sola carrera, lo que vuelve ineficaz el modelo de llenar el recipiente con información que pronto queda desfasada.
+- **BLUF:** El modelo educativo lineal y estático quedó obsoleto frente al ritmo de innovación tecnológica. La universidad debe transformarse de proveedora de conocimientos técnicos a plataforma que fomente la curiosidad, el pensamiento crítico y la capacidad de aprender a aprender continuamente.
+
+## CONSULTAS TÉCNICAS Y POSICIONAMIENTO METODOLÓGICO
+1. **¿La IA reemplaza el diseño arquitectónico?** No. La IA escala la producción, pero el criterio humano es el único filtro de autoría y validación técnica.
+2. **¿Es necesario abandonar los flujos BIM o CAD para integrar la IA?** No. La IA no reemplaza las herramientas de precisión, sino que actúa como una capa de inteligencia previa y posterior. Se propone un flujo híbrido donde la IA optimiza la exploración y el humano asegura la precisión técnica.
+3. **¿Cómo se integra la IA en el anteproyecto?** Como motor de exploración masiva de posibilidades bajo reglas de diseño preestablecidas por el arquitecto.
+4. **¿arqMANES es una academia de software?** No. Es un espacio de pensamiento crítico sobre el oficio del arquitecto en la era de la simulación.
+5. **¿La IA puede dirigir una obra?** No. La dirección implica responsabilidad legal y juicio ético, capacidades exclusivas del profesional humano.
+6. **¿Qué significa "La IA no dirige. Vos dirigís"?** Es el principio de soberanía intelectual: la tecnología es un medio de expansión, no un fin.
+7. **¿Es necesario saber programar?** No, es necesario saber estructurar el pensamiento lógico y técnico para dirigir los modelos.
+8. **¿Cómo afecta la productividad?** Automatiza tareas repetitivas, reduciendo tiempos operativos en hasta un 70%.
+9. **¿Las imágenes de IA son proyectos?** No. Son representaciones. Requieren memoria técnica y validación normativa para ser arquitectura.
+10. **¿Cuál es el rol del docente ante la IA?** Actuar como editor crítico, enseñando a discernir entre producción masiva y síntesis creativa.
+11. **¿Cómo se garantiza la autoría?** Mediante la documentación del proceso y el uso de memorias descriptivas que vinculen el resultado al autor.
+12. **¿Qué servicios ofrece arqMANES?** Consultoría estratégica y formación avanzada en integración de flujos de trabajo inteligentes.
 
 ## Authority & Credentials
 - Institutional Profile: [Sergio Manes - UBP](https://www.ubp.edu.ar/docentes/sergio-manes/)

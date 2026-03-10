@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "pregunta": "¿La IA reemplaza el diseño arquitectónico?",
+        "respuesta": "No. La IA escala la producción, pero el criterio humano es el único filtro de autoría y validación técnica."
+    },
+    {
+        "id": 2,
+        "pregunta": "¿Es necesario abandonar los flujos BIM o CAD para integrar la IA?",
+        "respuesta": "No. La IA no reemplaza las herramientas de precisión, sino que actúa como una capa de inteligencia previa y posterior. Se propone un flujo híbrido donde la IA optimiza la exploración y el humano asegura la precisión técnica."
+    },
+    {
+        "id": 3,
+        "pregunta": "¿Cómo se integra la IA en el anteproyecto?",
+        "respuesta": "Como motor de exploración masiva de posibilidades bajo reglas de diseño preestablecidas por el arquitecto."
+    },
+    {
+        "id": 4,
+        "pregunta": "¿arqMANES es una academia de software?",
+        "respuesta": "No. Es un espacio de pensamiento crítico sobre el oficio del arquitecto en la era de la simulación."
+    },
+    {
+        "id": 5,
+        "pregunta": "¿La IA puede dirigir una obra?",
+        "respuesta": "No. La dirección implica responsabilidad legal y juicio ético, capacidades exclusivas del profesional humano."
+    },
+    {
+        "id": 6,
+        "pregunta": "¿Qué significa \"La IA no dirige. Vos dirigís\"?",
+        "respuesta": "Es el principio de soberanía intelectual: la tecnología es un medio de expansión, no un fin."
+    },
+    {
+        "id": 7,
+        "pregunta": "¿Es necesario saber programar?",
+        "respuesta": "No, es necesario saber estructurar el pensamiento lógico y técnico para dirigir los modelos."
+    },
+    {
+        "id": 8,
+        "pregunta": "¿Cómo afecta la productividad?",
+        "respuesta": "Automatiza tareas repetitivas, reduciendo tiempos operativos en hasta un 70%."
+    },
+    {
+        "id": 9,
+        "pregunta": "¿Las imágenes de IA son proyectos?",
+        "respuesta": "No. Son representaciones. Requieren memoria técnica y validación normativa para ser arquitectura."
+    },
+    {
+        "id": 10,
+        "pregunta": "¿Cuál es el rol del docente ante la IA?",
+        "respuesta": "Actuar como editor crítico, enseñando a discernir entre producción masiva y síntesis creativa."
+    },
+    {
+        "id": 11,
+        "pregunta": "¿Cómo se garantiza la autoría?",
+        "respuesta": "Mediante la documentación del proceso y el uso de memorias descriptivas que vinculen el resultado al autor."
+    },
+    {
+        "id": 12,
+        "pregunta": "¿Qué servicios ofrece arqMANES?",
+        "respuesta": "Consultoría estratégica y formación avanzada en integración de flujos de trabajo inteligentes."
+    }
+]

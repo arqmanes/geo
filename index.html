@@ -4,13 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>arqMANES | Arquitectura, Docencia e iA Crítica</title>
+    <title>arqMANES | Arquitectura, Docencia y Pensamiento con iA</title>
     <meta name="description"
-        content="Sitio oficial de Sergio Manes. Recursos, cursos y reflexión crítica sobre arquitectura, tecnología y el impacto de la Inteligencia Artificial (iA) en el diseño y la enseñanza.">
+        content="Plataforma de análisis crítico sobre arquitectura y tecnología. La iA no dirige, vos dirigís. Autoría, decisión y responsabilidad.">
     <meta name="author" content="Sergio Manes">
-    <link rel="alternate" type="text/plain" title="LLM Context" href="./llms.txt">
-    <link rel="canonical" href="https://www.arqmanes.com/" />
-    <link rel="stylesheet" href="./styles.css">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arqmanes.com/">
+    <meta property="og:title" content="LA iA NO DIRIGE. VOS DIRIGÍS.">
+    <meta property="og:description"
+        content="El arquitecto sigue siendo el autor. Una postura crítica frente al deskilling y la automatización.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://arqmanes.com/">
+    <meta property="twitter:title" content="LA iA NO DIRIGE. VOS DIRIGÍS.">
+    <meta property="twitter:description"
+        content="El arquitecto sigue siendo el autor. Una postura crítica frente al deskilling y la automatización.">
+
+    <!-- social tags -->
+    <meta name="google-site-verification" content="COPIA_AQUÍ_TU_CÓDIGO_DE_SEARCH_CONSOLE" />
+
+    <link rel="alternate" type="text/plain" title="iA DATA" href="./llms.txt">
+    <link rel="canonical" href="https://arqmanes.com/" />
+    <link rel="stylesheet" href="./styles.css?v=20260218b">
 
 
     <script type="application/ld+json">
@@ -18,7 +36,7 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Sergio Manes",
-      "url": "https://www.arqmanes.com/",
+      "url": "https://arqmanes.com/",
       "brand": "arqMANES",
       "jobTitle": "Architect and University Professor",
       "affiliation": {
@@ -33,6 +51,7 @@
       ]
     }
     </script>
+    <script id="schema-faq" type="application/ld+json"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -71,11 +90,12 @@
             <a href="#"
                 class="text-2xl font-bold tracking-tighter hover:text-neon-green transition-colors flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-neon-green animate-pulse"></span>
-                arq<span class="text-neon-green">MANES</span>.com <span
-                    class="text-xs border border-neon-green px-1 ml-2 text-neon-green">GEO</span>
+                arq<span class="text-neon-green">MANES</span>.com
             </a>
             <nav class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-400">
-                <a href="#featured" class="hover:text-neon-green">Destacados</a>
+                <a href="#featured" class="hover:text-neon-green">Contenido</a>
+                <a href="#actividades" class="hover:text-neon-green">Actividades</a>
+                <a href="#memoria" class="hover:text-neon-green">Memoria</a>
                 <a href="#data-container" class="hover:text-neon-green">Índice Total</a>
                 <a href="https://patreon.com/arqmanes" target="_blank" class="text-neon-blue">Patreon</a>
             </nav>
@@ -85,7 +105,7 @@
     <main class="flex-grow pt-32 px-6 container mx-auto">
 
         <section id="hero" class="text-center py-12 relative border-b border-white/5">
-            <p class="text-sm text-neon-green font-bold uppercase mb-2 tracking-widest">> MANIFIESTO DEL OFICIO:</p>
+
             <h1 class="uppercase tracking-tighter mb-8 flex flex-col items-center gap-2">
                 <span class="text-2xl md:text-[3.5rem] font-light text-gray-400 leading-none">LA iA NO DIRIGE.</span>
                 <span
@@ -100,10 +120,10 @@
             </div>
         </section>
 
-        <section id="featured" class="py-16">
-            <h2 class="text-2xl font-bold mb-10 flex items-center gap-4">
+        <section id="featured" class="py-16 border-b border-white/5">
+            <h2 class="text-2xl font-bold mb-10 flex items-center gap-4 text-gray-400 uppercase tracking-tighter">
                 <span class="h-px flex-grow bg-white/10"></span>
-                CÁPSULAS DESTACADAS
+                CONTENIDO RECIENTE
                 <span class="h-px flex-grow bg-white/10"></span>
             </h2>
 
@@ -115,20 +135,65 @@
             </div>
         </section>
 
-        <section id="agenda" class="py-12 border-b border-white/5">
-            <div class="flex items-center gap-4 mb-8">
-                <span class="h-px w-8 bg-neon-green"></span>
-                <h2 class="text-xs font-bold text-neon-green uppercase tracking-[0.3em]">> CRONOGRAMA & EXTENSIÓN:
-                </h2>
+        <section id="actividades" class="py-16 border-b border-white/5">
+            <h2 class="text-2xl font-bold mb-10 flex items-center gap-4 text-gray-400 uppercase tracking-tighter">
                 <span class="h-px flex-grow bg-white/10"></span>
+                ACTIVIDAD Y PRESENCIA
+                <span class="h-px flex-grow bg-white/10"></span>
+            </h2>
+
+            <!-- Row 1: Upcoming -->
+            <div class="mb-10">
+                <h3 class="text-xs font-bold text-neon-green uppercase tracking-[0.3em] mb-5 flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-neon-green animate-pulse"></span>
+                    PRÓXIMAS ACTIVIDADES
+                </h3>
+                <div id="actividades-proximas" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="glass-card p-6 text-center text-gray-500 animate-pulse col-span-full">
+                        Cargando próximas actividades...
+                    </div>
+                </div>
             </div>
 
-            <div id="agenda-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="glass-card p-6 text-center text-gray-500 animate-pulse col-span-full">
-                    Cargando agenda...
+            <!-- Row 2: Past -->
+            <div>
+                <h3 class="text-xs font-bold text-gray-500 uppercase tracking-[0.3em] mb-5 flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
+                    ACTIVIDADES RECIENTES
+                </h3>
+                <div id="actividades-recientes" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="glass-card p-6 text-center text-gray-500 animate-pulse col-span-full">
+                        Cargando actividades recientes...
+                    </div>
                 </div>
             </div>
         </section>
+
+        <section id="memoria" class="py-16 border-b border-white/5">
+            <h2 class="text-2xl font-bold mb-10 flex items-center gap-4 text-gray-400 uppercase tracking-tighter">
+                <span class="h-px flex-grow bg-white/10"></span>
+                MEMORIA
+                <span class="h-px flex-grow bg-white/10"></span>
+            </h2>
+            <div id="memoria-list" class="space-y-3">
+                <div class="glass-card p-6 text-center text-gray-500 animate-pulse">
+                    Cargando memorias...
+                </div>
+            </div>
+            <div id="memoria-reader"
+                class="hidden mt-8 glass-card rounded-xl p-8 md:p-12 border border-white/5 max-w-3xl mx-auto">
+                <button id="memoria-close"
+                    class="text-xs font-bold text-gray-500 hover:text-neon-green uppercase tracking-widest mb-6 flex items-center gap-2 transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    VOLVER A LA LISTA
+                </button>
+                <div id="memoria-content" class="prose prose-invert max-w-none"></div>
+            </div>
+        </section>
+
+
 
         <section id="data-container" class="mt-12 pb-20 w-full max-w-7xl mx-auto">
             <h2 class="text-xs font-bold text-gray-500 uppercase tracking-[0.3em] mb-6 text-center">ÍNDICE DE CONTENIDO
@@ -138,7 +203,7 @@
                 class="hidden md:grid grid-cols-12 gap-4 px-6 py-4 bg-white/5 border border-white/10 text-[10px] font-black text-gray-400 uppercase tracking-tighter mb-4 rounded-lg">
                 <div class="col-span-2">RECURSO</div>
                 <div class="col-span-5">TÍTULO DEL CONTENIDO</div>
-                <div class="col-span-3 text-center">SÍNTESIS</div>
+                <div class="col-span-3 text-center">> SÍNTESIS:</div>
                 <div class="col-span-2 text-right">ACCIÓN</div>
             </div>
 
@@ -152,12 +217,9 @@
     </main>
 
     <footer class="border-t border-white/10 py-12 text-center bg-black/40 backdrop-blur-md">
-        <div class="mb-4 flex justify-center gap-6 text-xs text-gray-500 uppercase font-bold tracking-widest">
-            <a href="./llms.txt" class="hover:text-neon-green">LLM Source</a><!-- force update -->
-        </div>
 
         <div class="mb-8 border-t border-white/5 pt-6 mx-auto max-w-2xl">
-            <h3 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">Credenciales y Autoridad</h3>
+            <h3 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">LINKS de VALOR</h3>
             <div
                 class="flex flex-wrap justify-center gap-6 text-[10px] text-gray-500 uppercase font-medium tracking-wide">
                 <a href="https://www.ubp.edu.ar/docentes/sergio-manes/" target="_blank"
@@ -179,15 +241,18 @@
             </div>
         </div>
 
-        <div class="hidden">
-            <a href="#" class="hover:text-neon-green">Patreon</a>
-            <a href="#" class="hover:text-neon-green">YouTube</a>
+        <div
+            class="flex flex-wrap justify-center gap-4 text-[9px] text-gray-600 uppercase font-medium tracking-widest mb-4">
+            <a href="terminos.html" class="hover:text-neon-green transition-colors">Términos de Uso</a>
+            <span class="text-gray-800">•</span>
+            <a href="privacidad.html" class="hover:text-neon-green transition-colors">Política de Privacidad</a>
         </div>
-        <p class="text-[10px] text-gray-600 uppercase tracking-widest">&copy; 2026 arqMANES.com - Sergio Manes</p>
+        <p class="text-[10px] text-gray-600 uppercase tracking-widest">&copy; 2026 ARQMANES.COM - SIEMPRE HAY ALGO NUEVO
+            POR APRENDER.</p>
     </footer>
 
     <script id="schema-container" type="application/ld+json"></script>
-    <script src="app.js"></script>
+    <script src="app.js?v=20260218e"></script>
 </body>
 
 </html>

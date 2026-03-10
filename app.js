@@ -1,5 +1,5 @@
 ﻿// app.js
-console.log('GEO System initialized.');
+console.log('arqMANES iA system initialized.');
 
 // Sample Data (Source of Truth Mock)
 const geoData = [
@@ -2393,9 +2393,164 @@ const geoData = [
 document.addEventListener('DOMContentLoaded', async () => {
     const tableGrid = document.getElementById('content-grid');
     const featuredGrid = document.getElementById('featured-grid');
-    const agendaGrid = document.getElementById('agenda-grid'); // New Agenda Grid
+    const agendaGrid = document.getElementById('agenda-grid');
+    const actividadesProximasGrid = document.getElementById('actividades-proximas');
+    const actividadesRecientesGrid = document.getElementById('actividades-recientes');
     let featuredData = [];
     let agendaData = [];
+
+    // 0. Fetch Activities Data (state computed at runtime from fecha_iso)
+    if (actividadesProximasGrid || actividadesRecientesGrid) {
+        try {
+            const response = await fetch('./data/actividad.json');
+            if (!response.ok) throw new Error('Network response was not ok');
+            const actividades = await response.json();
+
+            // Date-only comparison (ignore hours to avoid mid-day disappearance)
+            const todayStr = new Date().toISOString().split('T')[0];
+
+            // Upcoming: fecha_iso >= today, sorted closest first
+            const proximas = actividades
+                .filter(a => a.fecha_iso >= todayStr)
+                .sort((a, b) => a.fecha_iso.localeCompare(b.fecha_iso))
+                .slice(0, 3);
+
+            // Past: fecha_iso < today, sorted most recent first
+            const recientes = actividades
+                .filter(a => a.fecha_iso < todayStr)
+                .sort((a, b) => b.fecha_iso.localeCompare(a.fecha_iso))
+                .slice(0, 3);
+
+            if (actividadesProximasGrid) renderActivityCards(proximas, actividadesProximasGrid, todayStr);
+            if (actividadesRecientesGrid) renderActivityCards(recientes, actividadesRecientesGrid, todayStr);
+        } catch (error) {
+            console.error('Error fetching activities:', error);
+            const errMsg = `<div class="col-span-full text-center p-6 glass-card border border-red-500/30 rounded-xl"><p class="text-red-400 text-sm font-mono">⚠️ No se pudieron cargar las actividades.</p></div>`;
+            if (actividadesProximasGrid) actividadesProximasGrid.innerHTML = errMsg;
+            if (actividadesRecientesGrid) actividadesRecientesGrid.innerHTML = errMsg;
+        }
+    }
+
+    // 0b. Fetch Memoria Data
+    const memoriaList = document.getElementById('memoria-list');
+    const memoriaReader = document.getElementById('memoria-reader');
+    const memoriaContent = document.getElementById('memoria-content');
+    const memoriaClose = document.getElementById('memoria-close');
+
+    if (memoriaList) {
+        try {
+            const response = await fetch('./data/memoria.json');
+            if (!response.ok) throw new Error('Network response was not ok');
+            const memorias = await response.json();
+
+            // Sort by date descending
+            const sorted = [...memorias].sort((a, b) => b.fecha_iso.localeCompare(a.fecha_iso));
+
+            memoriaList.innerHTML = '';
+
+            if (sorted.length === 0) {
+                memoriaList.innerHTML = '<div class="text-center p-6 text-gray-500 text-sm italic">No hay memorias publicadas aún.</div>';
+            } else {
+                sorted.forEach(item => {
+                    const row = document.createElement('div');
+                    row.className = 'memoria-item glass-card rounded-lg px-6 py-4 flex flex-col md:flex-row md:items-center justify-between gap-3 group';
+                    row.innerHTML = `
+                        <div class="flex-grow">
+                            <h4 class="text-sm font-bold text-gray-200 group-hover:text-neon-green transition-colors leading-tight">
+                                ${item.titulo}
+                            </h4>
+                        </div>
+                        <div class="flex items-center gap-3 flex-shrink-0">
+                            <span class="memoria-badge">${item.categoria}</span>
+                            <span class="text-[10px] text-gray-500 font-mono">${item.fecha_iso}</span>
+                            <span class="text-[10px] text-gray-600 font-mono">${item.lectura} min</span>
+                        </div>
+                    `;
+                    row.addEventListener('click', () => openMemoria(item));
+                    memoriaList.appendChild(row);
+                });
+            }
+        } catch (error) {
+            console.error('Error fetching memorias:', error);
+            memoriaList.innerHTML = '<div class="text-center p-6 glass-card border border-red-500/30 rounded-xl"><p class="text-red-400 text-sm font-mono">⚠️ No se pudieron cargar las memorias.</p></div>';
+        }
+    }
+
+    function simpleMarkdownToHtml(md) {
+        return md
+            .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+            .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+            .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+            .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\*(.+?)\*/g, '<em>$1</em>')
+            .replace(/^\d+\. (.+)$/gm, '<li>$1</li>')
+            .replace(/^- (.+)$/gm, '<li>$1</li>')
+            .replace(/(<li>.*<\/li>\n?)+/g, (match) => {
+                return match.includes('1.') ? `<ol>${match}</ol>` : `<ul>${match}</ul>`;
+            })
+            .replace(/\n\n/g, '</p><p>')
+            .replace(/^(?!<[houl])/gm, (match, offset, str) => {
+                const before = str.substring(Math.max(0, offset - 5), offset);
+                if (before.includes('<')) return match;
+                return match;
+            });
+    }
+
+    function openMemoria(item) {
+        if (!memoriaReader || !memoriaContent || !memoriaList) return;
+        const html = simpleMarkdownToHtml(item.contenido_md);
+
+        // Construir imagen si existe
+        const imageHtml = item.imagen ?
+            `<img src="${item.imagen}" alt="${item.titulo}" class="w-full h-auto rounded-xl shadow-lg shadow-neon-blue/20 mb-8 object-cover max-h-[400px]">`
+            : '';
+
+        memoriaContent.innerHTML = `
+        ${imageHtml}
+        <div class="mb-6 flex items-center gap-3">
+                <span class="memoria-badge">${item.categoria}</span>
+                <span class="text-xs text-gray-500 font-mono">${item.fecha_iso}</span>
+                <span class="text-xs text-gray-600 font-mono">${item.lectura} min de lectura</span>
+            </div>
+            <div>${html}</div>
+            <div class="mt-8 pt-6 border-t border-white/5">
+                <div class="bluf-capsule pl-4 py-3 mb-4">
+                    <p class="text-[10px] font-bold text-neon-green/60 uppercase tracking-widest mb-1">SÍNTESIS</p>
+                    <p class="text-sm text-gray-300 leading-relaxed">${item.bluf}</p>
+                </div>
+                <div class="pl-4 py-2 mb-8">
+                    <p class="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">ANÁLISIS TÉCNICO</p>
+                    <p class="text-xs text-gray-400 leading-relaxed">${item.hecho_atomico}</p>
+                </div>
+                <button id="memoria-close-bottom"
+                    class="text-xs font-bold text-gray-500 hover:text-neon-green uppercase tracking-widest flex items-center gap-2 transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    VOLVER A LA LISTA
+                </button>
+            </div>
+        `;
+        const closeBottom = document.getElementById('memoria-close-bottom');
+        if (closeBottom) {
+            closeBottom.addEventListener('click', () => {
+                memoriaReader.classList.add('hidden');
+                memoriaList.classList.remove('hidden');
+                document.getElementById('memoria').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }
+        memoriaList.classList.add('hidden');
+        memoriaReader.classList.remove('hidden');
+        document.getElementById('memoria').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    if (memoriaClose) {
+        memoriaClose.addEventListener('click', () => {
+            memoriaReader.classList.add('hidden');
+            memoriaList.classList.remove('hidden');
+            document.getElementById('memoria').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    }
 
     // 1. Fetch Featured Data
     if (featuredGrid) {
@@ -2427,7 +2582,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    // 2. Fetch Agenda Data
+    // 2. Fetch Agenda Data (DISABLED - RESIDUAL CONTENT REMOVED)
+    /*
     if (agendaGrid) {
         try {
             const response = await fetch('./agenda.json');
@@ -2443,20 +2599,126 @@ document.addEventListener('DOMContentLoaded', async () => {
             `;
         }
     }
+    */
 
-    // 3. Render Technical Table (Base Data)
-    if (tableGrid) {
-        const countDisplay = document.getElementById('video-count');
-        if (countDisplay) countDisplay.textContent = featuredData.length;
-        renderGeoCards(featuredData, tableGrid);
-    }
+    // 2. Fetch all data sources
+    Promise.all([
+        fetch('./data/videos.json').then(res => res.json()),
+        fetch('./Videos youtube.csv').then(res => res.text())
+    ])
+        .then(([jsonData, csvText]) => {
+            // Map Spanish keys from SSOT to internal English keys
+            const featuredData = jsonData.map(v => ({
+                id: v.id,
+                title: v.titulo,
+                date: v.fecha || 'Reciente',
+                bluf: v.bluf,
+                atomic_fact: v.hecho_atomico,
+                category: v.categoria,
+                link: v.url,
+                type: v.tipo || 'VIDEO',
+                duration: v.duration || '10:00',
+                thumbnail: v.thumbnail || `https://img.youtube.com/vi/${v.id}/maxresdefault.jpg`
+            }));
 
-    // 4. Generate Schema for ALL content
-    const safeGeoData = typeof geoData !== 'undefined' ? geoData : [];
-    const allData = [...featuredData, ...safeGeoData];
-    generateGeoSchema(allData);
+            const allVideos = parseVideoCSV(csvText);
+
+            // Sort videos by ID descending (Column 1 is the Guide)
+            // IDs go from 811 (oldest) to 1075+ (newest)
+            allVideos.sort((a, b) => b.id - a.id);
+
+            // 1. Render Recent Content (Top 9 combined)
+            if (featuredGrid) {
+                // Combine explicit featured items with newest from archive, ensuring 9 slots
+                const combinedRecent = [...featuredData, ...allVideos].slice(0, 9);
+                renderFeaturedCards(combinedRecent, featuredGrid);
+            }
+
+            // 2. Render Technical Table (Total History from CSV)
+            if (tableGrid) {
+                const countDisplay = document.getElementById('video-count');
+                if (countDisplay) countDisplay.textContent = allVideos.length;
+                renderGeoCards(allVideos, tableGrid);
+            }
+
+            // 3. Generate Schema from BOTH sources for maximum authority
+            generateGeoSchema([...featuredData, ...allVideos]);
+        })
+        .catch(err => {
+            console.error('Error fetching data:', err);
+            if (featuredGrid) featuredGrid.innerHTML = '<p class="text-red-500">Error cargando contenidos.</p>';
+            if (tableGrid) tableGrid.innerHTML = '<p class="text-red-500">Error cargando el historial de videos.</p>';
+        });
+
     generateAgendaSchema(agendaData); // New Schema for Events
 });
+
+/**
+ * Robust CSV parser that handles multi-line fields and quoted commas
+ * @param {string} text - Raw CSV content
+ */
+function parseVideoCSV(text) {
+    if (!text) return [];
+
+    const records = [];
+    let field = '';
+    let inQuotes = false;
+    let record = [];
+
+    // Character-by-character parsing to handle quotes and newlines correctly
+    for (let i = 0; i < text.length; i++) {
+        const char = text[i];
+        const next = text[i + 1];
+
+        if (char === '"') {
+            if (inQuotes && next === '"') {
+                field += '"';
+                i++; // Skip double quote
+            } else {
+                inQuotes = !inQuotes;
+            }
+        } else if (char === ',' && !inQuotes) {
+            record.push(field.trim());
+            field = '';
+        } else if (char === '\n' && !inQuotes) {
+            record.push(field.trim());
+            if (record.length > 0) records.push(record);
+            record = [];
+            field = '';
+        } else if (char === '\r' && !inQuotes) {
+            // ignore
+        } else {
+            field += char;
+        }
+    }
+    if (field || record.length > 0) {
+        record.push(field.trim());
+        records.push(record);
+    }
+
+    return records.map(row => {
+        if (row.length < 7) return null;
+
+        const id = parseInt(row[0].replace(/[^\d]/g, '')) || 0;
+        const link = row[6] || '';
+        const videoId = link.match(/(?:v=|\/)([\w-]{11})/)?.[1];
+        if (!videoId || !row[4]) return null;
+
+        const desc = (row[5] || '').replace(/^"|"$/g, '').trim();
+        const synthesis = desc.split(/\s+/).slice(0, 15).join(' ') + (desc.split(/\s+/).length > 15 ? '...' : '');
+
+        return {
+            id: id,
+            title: row[4].replace(/^"|"$/g, '').trim(),
+            category: row[1].replace(/^"|"$/g, '').trim(),
+            date: row[2].replace(/^"|"$/g, '').trim(),
+            description: desc,
+            bluf: synthesis,
+            link: link,
+            thumbnail: `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`
+        };
+    }).filter(v => v !== null);
+}
 
 function getSoftwareFromTitle(title) {
     const softwareList = [
@@ -2494,9 +2756,14 @@ function renderGeoCards(data, container) {
 
             <!-- Column 2: Identity (Desktop: 5 cols) -->
             <div class="col-span-12 md:col-span-5 w-full flex flex-col gap-1">
-                <span class="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] group-hover:text-neon-green transition-colors">
-                    ${card.category || 'CONTENIDO'}
-                </span>
+                <div class="flex items-center gap-2">
+                    <span class="text-[10px] font-bold text-neon-green uppercase tracking-[0.2em]">
+                        ${card.category || 'CONTENIDO'}
+                    </span>
+                    <span class="text-[9px] font-mono text-gray-500 uppercase">
+                        ${card.date || ''}
+                    </span>
+                </div>
                 <h3 class="text-sm font-bold text-gray-200 group-hover:text-white transition-colors leading-snug">
                     ${card.title}
                 </h3>
@@ -2524,17 +2791,24 @@ function renderGeoCards(data, container) {
 
 function renderFeaturedCards(data, container) {
     container.innerHTML = '';
-    data.forEach(card => {
+    data.forEach((card, index) => {
         const item = document.createElement('article');
-        item.className = 'glass-card rounded-xl overflow-hidden group hover:border-neon-green/50 transition-all shadow-2xl flex flex-col h-full';
+        // Mobile UX: Show only first 3 cards on mobile, others on desktop
+        const visibilityClass = index < 3 ? 'flex' : 'hidden md:flex';
+        item.className = `glass-card rounded-xl overflow-hidden group hover:border-neon-green/50 transition-all shadow-2xl flex-col h-full ${visibilityClass}`;
         item.setAttribute('data-geo-type', 'featured');
+
+        const isArticle = card.type === 'ARTÍCULO';
+        const actionText = isArticle ? 'Leer Ahora' : 'Ver Ahora';
+        const playIcon = `<svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>`;
+        const bookIcon = `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18 18.246 18.477 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>`;
 
         item.innerHTML = `
             <div class="aspect-video bg-gray-900 relative">
                 <img src="${card.thumbnail}" alt="${card.title}" class="object-cover w-full h-full opacity-80 group-hover:opacity-100 transition-all duration-700">
                 <div class="absolute inset-0 flex items-center justify-center">
                     <div class="w-12 h-12 bg-neon-green text-black rounded-full flex items-center justify-center font-bold opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0 shadow-[0_0_20px_rgba(57,255,20,0.6)]">
-                         <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                         ${isArticle ? bookIcon : playIcon}
                     </div>
                 </div>
                 <div class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-black/80 text-white text-[10px] font-mono rounded backdrop-blur-sm border border-white/10">
@@ -2568,11 +2842,11 @@ function renderFeaturedCards(data, container) {
 
                 <div class="flex justify-between items-center text-[10px] uppercase font-bold text-gray-500 mt-2 border-t border-white/5 pt-3">
                     <span class="flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 rounded-full bg-neon-blue shadow-[0_0_5px_#00ffff]"></span>
+                        <span class="w-1.5 h-1.5 rounded-full ${isArticle ? 'bg-neon-green shadow-[0_0_5px_rgba(57,255,20,0.6)]' : 'bg-neon-blue shadow-[0_0_5px_#00ffff]'}"></span>
                         ${card.topic || card.category || 'ANÁLISIS'}
                     </span>
                     <a href="${card.link}" target="_blank" class="text-neon-green hover:text-white transition-colors flex items-center gap-1 group/link hover:underline decoration-neon-green/50 underline-offset-4">
-                        Ver Ahora
+                        ${actionText}
                         <span class="group-hover/link:translate-x-1 transition-transform">→</span>
                     </a>
                 </div>
@@ -2704,8 +2978,15 @@ function generateAgendaSchema(data) {
             "@type": item.location.toLowerCase().includes('online') ? "BroadcastEvent" : "Event",
             "position": index + 1,
             "name": item.title,
-            "description": item.bluf,
+            "description": (item.bluf ? item.bluf + " " : "") + "Actividad académica/profesional. Consultar disponibilidad y aranceles específicos mediante contacto directo.",
             "startDate": new Date(item.date).toISOString(),
+            "endDate": item.endDate ? new Date(item.endDate).toISOString() : new Date(new Date(item.date).getTime() + 3 * 60 * 60 * 1000).toISOString(),
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "ARS",
+                "availability": "https://schema.org/InStock"
+            },
             "eventStatus": "https://schema.org/EventScheduled",
             "eventAttendanceMode": item.location.toLowerCase().includes('online')
                 ? "https://schema.org/OnlineEventAttendanceMode"
@@ -2745,4 +3026,174 @@ function generateAgendaSchema(data) {
     }
     script.text = JSON.stringify(schema);
     console.log('JSON-LD injected/updated for Agenda Schema.');
+}
+
+
+function renderActivityCards(data, container, todayStr) {
+    container.innerHTML = '';
+
+    if (!data || data.length === 0) {
+        container.innerHTML = `<div class="col-span-full text-center p-6 glass-card rounded-xl"><p class="text-gray-500 text-sm italic">No hay actividades para mostrar.</p></div>`;
+        return;
+    }
+
+    data.forEach(item => {
+        // Compute state at runtime from fecha_iso
+        let estado, estadoLabel;
+        if (item.fecha_iso === todayStr) {
+            estado = 'en_curso';
+            estadoLabel = '> EN CURSO';
+        } else if (item.fecha_iso > todayStr) {
+            estado = 'proximo';
+            estadoLabel = '> PRÓXIMO';
+        } else {
+            estado = 'realizado';
+            estadoLabel = '> REALIZADO';
+        }
+
+        const isRealizado = estado === 'realizado';
+        const isEnCurso = estado === 'en_curso';
+        const card = document.createElement('article');
+
+        let cardClasses = 'activity-card glass-card rounded-xl p-6 flex flex-col h-full group';
+        if (isRealizado) cardClasses += ' activity-card--realizado hidden md:flex';
+        if (isEnCurso) cardClasses += ' activity-card--en-curso';
+
+        card.className = cardClasses;
+
+        // Check if BLUF / hecho_atomico have real content (not placeholders)
+        const hasBluf = item.bluf && !item.bluf.includes('[COMPLETAR]');
+        const hasHecho = item.hecho_atomico && !item.hecho_atomico.includes('[COMPLETAR]');
+        const hasGeoData = hasBluf || hasHecho;
+
+        // Generate unique ID for expand toggle
+        const cardId = 'act-' + item.fecha_iso.replace(/-/g, '') + '-' + Math.random().toString(36).substr(2, 4);
+
+        card.innerHTML = `
+            <div class="mb-4 flex items-center justify-between">
+                <span class="activity-badge ${isRealizado ? 'activity-badge--realizado' : 'activity-badge--proximo'}">
+                    ${item.tipo}
+                </span>
+                <div class="flex items-center gap-2">
+                    ${hasGeoData ? `
+                        <button onclick="document.getElementById('${cardId}').classList.toggle('activity-detail--open')" class="hidden md:flex w-5 h-5 rounded-full border ${isRealizado ? 'border-gray-600 text-gray-600 hover:text-gray-400' : 'border-neon-green/30 text-neon-green/50 hover:text-neon-green'} items-center justify-center text-[10px] font-bold transition-colors cursor-pointer" title="Ver análisis GEO" aria-label="Ver análisis">
+                            i
+                        </button>
+                    ` : ''}
+                    <span class="text-[9px] font-bold uppercase tracking-widest font-mono ${isEnCurso ? 'text-neon-green animate-pulse' : isRealizado ? 'text-gray-600' : 'text-neon-green/50'}">
+                        ${estadoLabel}
+                    </span>
+                </div>
+            </div>
+
+            <div class="flex-grow">
+                <h4 class="text-base font-bold ${isRealizado ? 'text-gray-400' : 'text-gray-100 group-hover:text-neon-green'} leading-tight mb-3 transition-colors">
+                    ${item.titulo}
+                </h4>
+                <div class="space-y-1 mb-4">
+                    <p class="text-xs text-gray-400 flex items-center gap-2">
+                        <svg class="w-3.5 h-3.5 ${isRealizado ? 'text-gray-600' : 'text-neon-green/60'}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                        ${item.institucion}
+                    </p>
+                    <p class="text-xs text-gray-500 flex items-center gap-2">
+                        <svg class="w-3.5 h-3.5 ${isRealizado ? 'text-gray-600' : 'text-neon-green/60'}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        ${item.ubicacion}
+                        ${(() => {
+                const flagMap = { 'argentina': 'ar', 'méxico': 'mx', 'mexico': 'mx', 'españa': 'es', 'spain': 'es', 'usa': 'us', 'estados unidos': 'us' };
+                const p = (item.pais || '').toLowerCase().replace(/[^\w\sáéíóúñü]/g, '').trim();
+                const code = Object.keys(flagMap).find(k => p.includes(k));
+                if (code) return '<img src="https://flagcdn.com/w40/' + flagMap[code] + '.png" alt="' + item.pais + '" class="inline-block w-8 h-6 rounded-sm object-cover ml-1" style="vertical-align: middle;" />';
+                if (p.includes('online')) return '<span class="ml-1" style="font-size:14px;">🌐</span>';
+                return '';
+            })()}
+                    </p>
+                </div>
+
+                ${hasGeoData ? `
+                <div id="${cardId}" class="activity-detail hidden md:block">
+                    <div class="activity-detail-inner p-3 rounded-lg bg-white/5 border-l-2 ${isRealizado ? 'border-gray-600' : 'border-neon-green/40'} space-y-2">
+                        ${hasHecho ? `
+                        <p class="text-[10px] text-gray-400 leading-snug">
+                            <strong class="${isRealizado ? 'text-gray-500' : 'text-neon-blue'} uppercase text-[9px] tracking-wider block mb-0.5">> ANÁLISIS TÉCNICO:</strong>
+                            ${item.hecho_atomico}
+                        </p>` : ''}
+                        ${hasBluf ? `
+                        <p class="text-[10px] text-gray-400 leading-snug italic">
+                            <strong class="${isRealizado ? 'text-gray-500' : 'text-neon-green'} uppercase text-[9px] tracking-wider not-italic block mb-0.5">> SÍNTESIS:</strong>
+                            "${item.bluf}"
+                        </p>` : ''}
+                    </div>
+                </div>
+                ` : ''}
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-white/5 flex items-center justify-between">
+                <span class="text-sm font-bold ${isRealizado ? 'text-gray-500' : 'text-white'} font-mono tracking-tight">
+                    ${item.fecha_display}
+                </span>
+                ${item.link && item.link !== '#' ? `
+                    <a href="${item.link}" target="_blank" class="text-[10px] font-bold uppercase tracking-widest ${isRealizado ? 'text-gray-500 hover:text-gray-300' : 'text-neon-green/60 hover:text-neon-green'} transition-colors flex items-center gap-1">
+                        MÁS INFO
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                ` : `
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-gray-600">
+                        ${isRealizado ? 'REALIZADO' : ''}
+                    </span>
+                `}
+            </div>
+        `;
+
+        container.appendChild(card);
+    });
+}
+
+// --- FAQ (Invisible Data Layer) Initialization ---
+async function initFAQ() {
+    const schemaFaq = document.getElementById('schema-faq');
+    if (!schemaFaq) return;
+
+    try {
+        // Fetch from the backup file as it's the "invisible" data source
+        const response = await fetch('data/consultas-ia.json');
+        if (!response.ok) throw new Error('Could not load consultas-ia.json');
+
+        const data = await response.json();
+
+        // Inject FAQ Schema for search engines and IAs
+        injectFAQSchema(data, schemaFaq);
+
+        console.log('✅ Invisible Data Layer (FAQ) initialized.');
+    } catch (error) {
+        console.error('❌ Error initializing Invisible Data Layer:', error);
+    }
+}
+
+function injectFAQSchema(data, scriptTag) {
+    if (!scriptTag) return;
+
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": data.map(item => ({
+            "@type": "Question",
+            "name": item.pregunta,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.respuesta
+            }
+        }))
+    };
+
+    scriptTag.text = JSON.stringify(schema);
+    console.log('✅ FAQ Schema injected (Invisible).');
+}
+
+// Call initialization
+document.addEventListener('DOMContentLoaded', () => {
+    initFAQ();
+});
+
+function initAll() {
+    console.log('arqMANES iA System Ready.');
 }
