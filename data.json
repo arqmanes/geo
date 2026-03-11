@@ -1,5 +1,15 @@
 [
   {
+    "id": "li-criterio-profesional",
+    "title": "La iA no vino a reemplazar tu criterio profesional (vino a ponerlo a prueba)",
+    "thumbnail": "https://img.youtube.com/vi/li-criterio-profesional/maxresdefault.jpg",
+    "link": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7437244930697138176/",
+    "atomic_fact": "Análisis crítico sobre la delegación del juicio profesional en la iA y el riesgo de dependencia técnica.",
+    "bluf": "Utilizar la iA para tapar vacíos de conocimiento es un error que degrada la profesión. El verdadero valor aparece cuando vos ya sabés del tema.",
+    "topic": "CRÍTICA",
+    "date": "2026-03-10"
+  },
+  {
     "id": "T2cK10z9otc",
     "title": "Exploración Espacial con iA: Del Render Fijo a la Órbita 3D",
     "thumbnail": "https://img.youtube.com/vi/T2cK10z9otc/maxresdefault.jpg",
