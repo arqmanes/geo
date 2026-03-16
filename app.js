@@ -1,4 +1,4 @@
-﻿// app.js
+// app.js
 console.log('arqMANES iA system initialized.');
 
 // Sample Data (Source of Truth Mock)
@@ -2795,8 +2795,16 @@ function renderFeaturedCards(data, container) {
         const item = document.createElement('article');
         // Mobile UX: Show only first 3 cards on mobile, others on desktop
         const visibilityClass = index < 3 ? 'flex' : 'hidden md:flex';
-        item.className = `glass-card rounded-xl overflow-hidden group hover:border-neon-green/50 transition-all shadow-2xl flex-col h-full ${visibilityClass}`;
+        item.className = `glass-card rounded-xl overflow-hidden group hover:border-neon-green/50 transition-all shadow-2xl flex-col h-full cursor-pointer ${visibilityClass}`;
         item.setAttribute('data-geo-type', 'featured');
+        
+        // Add click event for the whole card
+        item.onclick = (e) => {
+            // Prevent double opening if the user clicks the explicit link button at the bottom
+            if (!e.target.closest('a')) {
+                window.open(card.link, '_blank');
+            }
+        };
 
         const isArticle = card.type === 'ARTÍCULO';
         const actionText = isArticle ? 'Leer Ahora' : 'Ver Ahora';
@@ -2804,7 +2812,7 @@ function renderFeaturedCards(data, container) {
         const bookIcon = `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18 18.246 18.477 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>`;
 
         item.innerHTML = `
-            <div class="aspect-video bg-gray-900 relative">
+            <div class="aspect-video bg-gray-900 relative overflow-hidden">
                 <img src="${card.thumbnail}" alt="${card.title}" class="object-cover w-full h-full opacity-80 group-hover:opacity-100 transition-all duration-700">
                 <div class="absolute inset-0 flex items-center justify-center">
                     <div class="w-12 h-12 bg-neon-green text-black rounded-full flex items-center justify-center font-bold opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0 shadow-[0_0_20px_rgba(57,255,20,0.6)]">

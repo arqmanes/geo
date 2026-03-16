@@ -1,5 +1,14 @@
 [
     {
+        "id": "kFwWXshd95c",
+        "titulo": "YouTube encuentra demasiado y la iA alucina. Así lo resolví",
+        "fecha": "2026-03-10",
+        "bluf": "Para resolver la imprecisión de los buscadores y las respuestas incorrectas de la IA general, Sergio Manes lanzó un chatbot gratuito entrenado solo con su contenido profesional.",
+        "hecho_atomico": "Implementación de una interfaz de búsqueda semántica personalizada (chatbot.arqmanes.com) diseñada para mitigar las 'alucinaciones' de los LLMs generales y la ineficiencia de los buscadores por palabras clave. El sistema utiliza exclusivamente el corpus de conocimiento verificado de arqMANES (+1200 videos), garantizando precisión técnica y coherencia metodológica en las respuestas sobre AutoCAD, Revit y SketchUp.",
+        "categoria": "SISTEMAS",
+        "url": "https://www.youtube.com/watch?v=kFwWXshd95c"
+    },
+    {
         "id": "li-criterio-profesional",
         "tipo": "ARTÍCULO",
         "titulo": "La iA no vino a reemplazar tu criterio profesional (vino a ponerlo a prueba)",

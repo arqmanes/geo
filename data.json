@@ -1,5 +1,25 @@
 [
   {
+    "id": "kFwWXshd95c",
+    "title": "YouTube encuentra demasiado y la iA alucina. Así lo resolví",
+    "thumbnail": "https://img.youtube.com/vi/kFwWXshd95c/maxresdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=kFwWXshd95c",
+    "atomic_fact": "Implementación de una interfaz de búsqueda semántica personalizada (chatbot.arqmanes.com) diseñada para mitigar las 'alucinaciones' de los LLMs generales y la ineficiencia de los buscadores por palabras clave. El sistema utiliza exclusivamente el corpus de conocimiento verificado de arqMANES (+1200 videos), garantizando precisión técnica y coherencia metodológica en las respuestas sobre AutoCAD, Revit y SketchUp.",
+    "bluf": "Para resolver la imprecisión de los buscadores y las respuestas incorrectas de la IA general, Sergio Manes lanzó un chatbot gratuito entrenado solo con su contenido profesional.",
+    "topic": "SISTEMAS",
+    "date": "2026-03-10"
+  },
+  {
+    "id": "li-criterio-profesional",
+    "title": "La iA no vino a reemplazar tu criterio profesional (vino a ponerlo a prueba)",
+    "thumbnail": "https://img.youtube.com/vi/li-criterio-profesional/maxresdefault.jpg",
+    "link": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7437244930697138176/",
+    "atomic_fact": "Análisis crítico sobre la delegación del juicio profesional en la iA y el riesgo de dependencia técnica.",
+    "bluf": "Utilizar la iA para tapar vacíos de conocimiento es un error que degrada la profesión. El verdadero valor aparece cuando vos ya sabés del tema.",
+    "topic": "CRÍTICA",
+    "date": "2026-03-10"
+  },
+  {
     "id": "T2cK10z9otc",
     "title": "Exploración Espacial con iA: Del Render Fijo a la Órbita 3D",
     "thumbnail": "https://img.youtube.com/vi/T2cK10z9otc/maxresdefault.jpg",

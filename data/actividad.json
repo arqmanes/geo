@@ -1,5 +1,17 @@
 [
     {
+        "titulo": "Le Corbusier en blanco y negro por Sergio Manes",
+        "tipo": "Exposición Fotográfica",
+        "institucion": "Colegio de Arquitectos de Mendoza (CAMZA)",
+        "ubicacion": "Mitre 617, 1º piso, Ciudad de Mendoza",
+        "pais": "🇦🇷 Argentina",
+        "fecha_display": "20 Mar 2026",
+        "fecha_iso": "2026-03-20",
+        "link": "https://camza.org.ar/le-corbusier-en-blanco-y-negro-por-sergio-manes/",
+        "bluf": "Sergio Manes inaugura su muestra fotográfica capturando la esencia del maestro moderno. Una exploración visual que invita a redescubrir la obra de Le Corbusier a través de un lente arquitectónico y luz monocromática.",
+        "hecho_atomico": "Inauguración de la muestra fotográfica 'Le Corbusier en blanco y negro', centrada en el análisis visual de la espacialidad y tectónica corbusieriana desde la fotografía de autor."
+    },
+    {
         "titulo": "Inteligencia Artificial Arquitectónica en Madrid",
         "tipo": "Workshop Presencial",
         "institucion": "Blueprints Workshops",

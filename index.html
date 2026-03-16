@@ -80,6 +80,37 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
+
+        /* Neural Interface Styles */
+        .neural-container {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .neural-glow-blue {
+            box-shadow: 0 0 10px #00ffff;
+        }
+
+        @keyframes scan-line {
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(100%);
+            }
+        }
+
+        .neural-scanner::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #00ffff, transparent);
+            animation: scan-line 4s linear infinite;
+            opacity: 0.5;
+        }
     </style>
 </head>
 
@@ -90,7 +121,7 @@
             <a href="#"
                 class="text-2xl font-bold tracking-tighter hover:text-neon-green transition-colors flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-neon-green animate-pulse"></span>
-                arq<span class="text-neon-green">MANES</span>.com
+                <span class="flex items-center">arq<span class="text-neon-green">MANES</span>.com</span>
             </a>
             <nav class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-400">
                 <a href="#featured" class="hover:text-neon-green">Contenido</a>
@@ -193,9 +224,69 @@
             </div>
         </section>
 
+        <section id="neural-link" class="py-16 border-b border-white/5 relative overflow-hidden">
+            <!-- Scan line effect -->
+            <div class="absolute inset-0 pointer-events-none neural-scanner overflow-hidden opacity-20"></div>
 
+            <div
+                class="neural-container rounded-2xl p-px bg-gradient-to-br from-neon-blue/20 via-transparent to-neon-blue/5">
+                <div
+                    class="bg-black/40 backdrop-blur-xl rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-white/5">
 
-        <section id="data-container" class="mt-12 pb-20 w-full max-w-7xl mx-auto">
+                    <div class="flex-grow space-y-4 text-left">
+                        <div class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-neon-blue neural-glow-blue animate-pulse"></span>
+                            <span class="text-[10px] font-mono tracking-[0.4em] text-neon-blue uppercase">System Status:
+                                Neural Sync Active</span>
+                        </div>
+
+                        <h2 class="text-3xl md:text-5xl font-black tracking-tighter uppercase italic leading-none">
+                            INTERFAZ DE <span
+                                class="text-neon-blue drop-shadow-[0_0_15px_rgba(0,255,255,0.3)]">RED NEURONAL</span>
+                        </h2>
+
+                        <p class="text-gray-400 text-sm max-w-xl font-light leading-relaxed">
+                            Conversá con nuestro contenido. Hemos volcado el saber acumulado en más de <span class="text-white font-bold">1200 videos</span> 
+                            en esta red neuronal para que te acompañe en tu proceso de aprendizaje. Respuestas precisas, basadas en nuestra historia, al alcance de un clic.
+                        </p>
+
+                        <div class="flex flex-wrap gap-4 pt-4">
+                            <div class="px-4 py-2 bg-white/5 rounded border border-white/10 flex flex-col">
+                                <span class="text-[9px] text-gray-500 uppercase font-black tracking-widest">DATASET</span>
+                                <span class="font-mono text-[10px] text-neon-blue uppercase">1200+ Nodes</span>
+                            </div>
+                            <div class="px-4 py-2 bg-white/5 rounded border border-white/10 flex flex-col">
+                                <span
+                                    class="text-[9px] text-gray-500 uppercase font-black tracking-widest">PROTOCOL</span>
+                                <span class="font-mono text-[10px] text-neon-blue uppercase">Semantic_Query</span>
+                            </div>
+                            <div class="px-4 py-2 bg-white/5 rounded border border-white/10 flex flex-col">
+                                <span
+                                    class="text-[9px] text-gray-500 uppercase font-black tracking-widest">MODEL</span>
+                                <span class="font-mono text-[10px] text-neon-blue uppercase">Notebook-LM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-shrink-0 w-full md:w-auto">
+                        <a href="https://chatbot.arqmanes.com" target="_blank"
+                            class="group relative inline-flex items-center justify-center px-10 py-5 font-black text-xs uppercase tracking-[0.2em] bg-neon-blue text-black hover:bg-white transition-all duration-300 rounded-lg overflow-hidden w-full md:w-auto">
+                            <span class="relative z-10 flex items-center gap-3">
+                                CONSULTAR A NUESTRO CHATBOT
+                                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="data-container" class="mt-12 pb-20 w-full max-w-7xl mx-auto"> Widow index content -->
+
             <h2 class="text-xs font-bold text-gray-500 uppercase tracking-[0.3em] mb-6 text-center">ÍNDICE DE CONTENIDO
                 (<span id="video-count">...</span>)</h2>
 
