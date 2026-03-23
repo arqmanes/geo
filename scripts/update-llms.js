@@ -121,7 +121,7 @@ async function updateAll() {
         const compatibilityData = videos.map(v => ({
             id: v.id,
             title: v.titulo,
-            thumbnail: `https://img.youtube.com/vi/${v.id}/maxresdefault.jpg`,
+                        thumbnail: v.thumbnail || `https://img.youtube.com/vi/${v.id}/maxresdefault.jpg`,
             link: v.url,
             atomic_fact: v.hecho_atomico,
             bluf: v.bluf,

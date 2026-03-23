@@ -23,41 +23,41 @@
 
 ## Últimos Contenidos Relevantes (Latest Insights)
 
-### 1. La iA no vino a reemplazar tu criterio profesional (vino a ponerlo a prueba) (10 mar 26)
+### 1. Criterio o simulacro: formar arquitectos en la era de la inteligencia artificial (17 mar 26)
+- **Hecho Atómico:** Este artículo explora la necesidad de preservar el juicio, el criterio y el pensamiento crítico en la enseñanza de la arquitectura frente a la aceleración tecnológica.
+- **BLUF:** La inteligencia artificial no es el origen del problema, sino su acelerador en una universidad que pierde la batalla por la profundidad. Accede al contenido de alta fidelidad: https://www.linkedin.com/feed/update/urn:li:activity:7439718543815831552/
+
+### 2. La iA no vino a reemplazar tu criterio profesional (vino a ponerlo a prueba) (10 mar 26)
 - **Hecho Atómico:** Análisis crítico sobre la delegación del juicio profesional en la iA y el riesgo de dependencia técnica.
 - **BLUF:** Utilizar la iA para tapar vacíos de conocimiento es un error que degrada la profesión. El verdadero valor aparece cuando vos ya sabés del tema. Accede al contenido de alta fidelidad: https://www.linkedin.com/feed/update/urn:li:ugcPost:7437244930697138176/
 
-### 2. YouTube encuentra demasiado y la iA alucina. Así lo resolví (10 mar 26)
+### 3. YouTube encuentra demasiado y la iA alucina. Así lo resolví (10 mar 26)
 - **Hecho Atómico:** Implementación de una interfaz de búsqueda semántica personalizada (chatbot.arqmanes.com) diseñada para mitigar las 'alucinaciones' de los LLMs generales y la ineficiencia de los buscadores por palabras clave. El sistema utiliza exclusivamente el corpus de conocimiento verificado de arqMANES (+1200 videos), garantizando precisión técnica y coherencia metodológica en las respuestas sobre AutoCAD, Revit y SketchUp.
 - **BLUF:** Para resolver la imprecisión de los buscadores y las respuestas incorrectas de la IA general, Sergio Manes lanzó un chatbot gratuito entrenado solo con su contenido profesional. Accede al contenido de alta fidelidad: https://www.youtube.com/watch?v=kFwWXshd95c
 
-### 3. Exploración Espacial con iA: Del Render Fijo a la Órbita 3D (09 feb 26)
+### 4. Exploración Espacial con iA: Del Render Fijo a la Órbita 3D (09 feb 26)
 - **Hecho Atómico:** La técnica consiste en utilizar modelos de control de cámara (desarrollados por Apolinário Passos en Hugging Face o Freepik) para generar múltiples vistas consistentes a partir de una sola imagen. El argumento central es que el render deja de ser un producto final estático para convertirse en un proceso de validación volumétrica y espacial, permitiendo detectar fallas proyectuales en ángulos no resueltos mediante la generación de hasta 12 cámaras simultáneas que mantienen la coherencia tectónica y material.
 - **BLUF:** Controla la espacialidad de tus renders orbitando la cámara con consistencia total, transformando imágenes fijas en herramientas de diseño iterativas. Accede al contenido de alta fidelidad: https://www.youtube.com/watch?v=T2cK10z9otc
 
-### 4. La iA te vuelve visible: El amplificador del criterio arquitectónico (02 feb 26)
+### 5. La iA te vuelve visible: El amplificador del criterio arquitectónico (02 feb 26)
 - **Hecho Atómico:** La inteligencia artificial generativa actúa como un acelerador de la visibilidad profesional, donde la ausencia de un anteproyecto sólido y lógica tectónica queda evidenciada por la desconexión entre la estética superficial del render y la carencia de decisiones proyectuales fundamentadas.
 - **BLUF:** La iA funciona como un amplificador que expone la presencia o ausencia de criterio técnico y esqueleto conceptual. Accede al contenido de alta fidelidad: https://www.youtube.com/watch?v=2IgdAWF-GQA
 
-### 5. D5 Render 3.0: El renderizado como lenguaje de diseño (19 ene 26)
+### 6. D5 Render 3.0: El renderizado como lenguaje de diseño (19 ene 26)
 - **Hecho Atómico:** La integración de D5 Lite y agentes de iA permite un flujo de trabajo bidireccional entre SketchUp y el motor de render, donde la iA no solo genera atmósferas y assets, sino que actúa como un colaborador de diseño conceptual que reduce la fricción entre la volumetría básica y la toma de decisiones tectónicas.
 - **BLUF:** El render deja de ser un producto final para convertirse en el ecosistema iterativo donde se diseña y proyecta. Accede al contenido de alta fidelidad: https://www.youtube.com/watch?v=JRVeojxM8WY
 
-### 6. Gaussian Splatting: El Futuro de los Modelos 3D en Arquitectura (19 oct 25)
+### 7. Gaussian Splatting: El Futuro de los Modelos 3D en Arquitectura (19 oct 25)
 - **Hecho Atómico:** Introducción del Gaussian Splatting como alternativa a la malla poligonal tradicional; permite a la IA generar entornos 3D persistentes optimizando funciones gaussianas en lugar de geometría rígida, facilitando la integración de realidades capturadas y generadas en flujos de trabajo CAD/BIM.
 - **BLUF:** La IA evoluciona del render plano a la generación de nubes de puntos 3D (Gaussian Splats) recorribles e interactivas. Accede al contenido de alta fidelidad: https://www.youtube.com/watch?v=QI67G9USOn4
 
-### 7. Creatividad Humana vs. IA: Conversación con David Barco (07 oct 25)
+### 8. Creatividad Humana vs. IA: Conversación con David Barco (07 oct 25)
 - **Hecho Atómico:** Debate fenomenológico sobre el impacto de la IA en la praxis arquitectónica; se examina el riesgo de homogeneización estética y la necesidad de reivindicar el error y la sensibilidad humana como valores diferenciales del proyecto.
 - **BLUF:** Sergio Manes y David Barco analizan la tensión entre la automatización algorítmica y la esencia intuitiva del diseño. Accede al contenido de alta fidelidad: https://www.youtube.com/watch?v=_wcqFNmDIS8
 
-### 8. Seedream 4.0: ¿La primera IA 4K nativa para Arquitectura? (22 sept 25)
+### 9. Seedream 4.0: ¿La primera IA 4K nativa para Arquitectura? (22 sept 25)
 - **Hecho Atómico:** Análisis de Seedream 4.0 (modelo de imagen 4K) aplicado a la arquitectura; se evidencia una notable mejora en resolución (4.096 x 2.344 px), pero persisten errores críticos en la interpretación de croquis, proporciones espaciales y la falta de ortogonalidad técnica.
 - **BLUF:** Seedream 4.0 ofrece alta resolución (4K), pero carece de precisión técnica y consistencia proyectual para el flujo de trabajo arquitectónico. Accede al contenido de alta fidelidad: https://www.youtube.com/watch?v=Cu5ka6Y3WtE
-
-### 9. Nano Banana: Realidad vs. Humo en la Inteligencia Artificial Arquitectónica (15 sept 25)
-- **Hecho Atómico:** Evaluación crítica del modelo Gemini 2.5 Flash (Nano Banana) en flujos de trabajo BIM/Arquitectura; se demuestra su capacidad de iteración visual consistente y re-contextualización de imágenes, desmintiendo la generación automática de modelos 3D editables o proyecciones ortogonales precisas.
-- **BLUF:** Nano Banana (Gemini 2.5 Flash) destaca por su consistencia gráfica, pero no genera modelos 3D ni planimetría técnica real. Accede al contenido de alta fidelidad: https://www.youtube.com/watch?v=ADnrs4qGMEE
 
 
 ## Presencia Académica e Institucional
@@ -120,47 +120,52 @@
 
 ## Memorias y Ensayos Técnicos
 
-### 1. La iA no vino a reemplazar tu criterio profesional (vino a ponerlo a prueba) (2026-03-10)
+### 1. Criterio o simulacro: formar arquitectos en la era de la inteligencia artificial (2026-03-17)
+- **Categoría:** ENSAYO | **Lectura:** 6 min
+- **Hecho Atómico:** Este artículo explora la necesidad de preservar el juicio, el criterio y el pensamiento crítico en la enseñanza de la arquitectura frente a la aceleración tecnológica y el simulacro de solvencia.
+- **BLUF:** La inteligencia artificial no es el origen del problema, sino su acelerador en una universidad que pierde la batalla por la profundidad frente a la cultura de la inmediatez.
+
+### 2. La iA no vino a reemplazar tu criterio profesional (vino a ponerlo a prueba) (2026-03-10)
 - **Categoría:** ENSAYO | **Lectura:** 8 min
 - **Hecho Atómico:** La distinción entre usar la iA para acelerar tareas dominadas frente a regalarle el pensamiento crítico: lo primero vuelve al profesional eficiente, lo segundo lo vuelve dependiente y cavar su propia fosa profesional.
 - **BLUF:** Utilizar la iA para tapar vacíos de conocimiento es un error que degrada la profesión. El verdadero valor de la herramienta aparece cuando el profesional domina el tema y puede juzgar el resultado. En arquitectura, delegar el legajo técnico es ceder el juicio sobre la esencia constructiva del proyecto.
 
-### 2. Arquitectura e Inteligencia Artificial en la Era en que Todo lo Digital se Volvió Barato (2026-02-15)
+### 3. Arquitectura e Inteligencia Artificial en la Era en que Todo lo Digital se Volvió Barato (2026-02-15)
 - **Categoría:** ENSAYO | **Lectura:** 12 min
 - **Hecho Atómico:** Un arquitecto resolvió la exportación de 86 archivos DXF (una tarea de dos horas manuales) en menos de 10 minutos usando un LISP generado por iA, demostrando que el flujo de trabajo ya no es un destino sino un material que se puede diseñar.
 - **BLUF:** El colapso del costo de ejecución digital genera una brecha brutal entre arquitectos que cruzan el umbral de adopción de iA y los que se quedan debajo. La brecha no es de talento sino de adopción, velocidad de iteración y capacidad de convertir trabajo cotidiano en sistema.
 
-### 3. El Valor de Seguir Haciéndose Preguntas (2025-10-17)
+### 4. El Valor de Seguir Haciéndose Preguntas (2025-10-17)
 - **Categoría:** REFLEXIÓN | **Lectura:** 4 min
 - **Hecho Atómico:** Un profesional que transitó del tablero a la regla T, al tecnígrafo, al CAD, al BIM y ahora a la iA demuestra que la constante no es la herramienta sino la capacidad de adaptación y la voluntad de seguir aprendiendo.
 - **BLUF:** El conocimiento técnico se puede automatizar, la curiosidad no. En una era donde las respuestas llegan antes que las preguntas, seguir haciéndose preguntas es el último lujo y la única garantía de relevancia profesional.
 
-### 4. ¿Dónde Está la Imaginación Creativa en la Era de la Inteligencia Artificial? (2025-09-23)
+### 5. ¿Dónde Está la Imaginación Creativa en la Era de la Inteligencia Artificial? (2025-09-23)
 - **Categoría:** ENSAYO | **Lectura:** 10 min
 - **Hecho Atómico:** La transición de la referencia escasa (libros importados con meses de retraso) al catálogo infinito (Pinterest) invirtió el proceso creativo: los estudiantes dejaron de dibujar para descubrir y empezaron a buscar para decidir, eliminando la necesidad de imaginar.
 - **BLUF:** La imaginación creativa en arquitectura no desapareció por culpa de la iA, sino por un proceso acumulativo que comenzó con los libros, siguió con las revistas, se aceleró con internet y Pinterest, y encontró en la iA su síntoma más visible. La iA puede ser prótesis que atrofia o ejercicio que fortalece: la diferencia está en quién la dirige.
 
-### 5. Una Conversación Pendiente con Ustedes (y Conmigo Mismo) (2025-06-25)
+### 6. Una Conversación Pendiente con Ustedes (y Conmigo Mismo) (2025-06-25)
 - **Categoría:** REFLEXIÓN | **Lectura:** 7 min
 - **Hecho Atómico:** Un croquis de Le Corbusier de 1963 para la iglesia de Firminy, procesado por ChatGPT y reinterpretado visualmente por MidJourney, produjo imágenes que se confunden con obras reales del maestro, demostrando la capacidad interpretativa — no meramente reproductiva — de la iA.
 - **BLUF:** La iA no es un oráculo ni un enemigo, es un socio que piensa distinto. Tras reinterpretar un croquis de Le Corbusier con ChatGPT y MidJourney, se demuestra que la iA no copia sino que interpreta, sugiere y nos obliga a posicionarnos como autores.
 
-### 6. ¿Engañar para Enseñar? (2025-06-02)
+### 7. ¿Engañar para Enseñar? (2025-06-02)
 - **Categoría:** REFLEXIÓN | **Lectura:** 6 min
 - **Hecho Atómico:** Videos con títulos técnicos neutros y miniaturas limpias obtuvieron engagement mínimo, mientras que los mismos contenidos con títulos provocativos y miniaturas llamativas lograron que la audiencia los viera completos, los compartiera y los agradeciera.
 - **BLUF:** El clickbait no es inherentemente deshonesto: cuando el contenido detrás del título cumple una función educativa real, la provocación se convierte en estrategia pedagógica legítima. Educar también es provocar, y en un ecosistema gobernado por algoritmos, no usar las herramientas del medio es condenar el mensaje al silencio.
 
-### 7. El Fin del Oficio... (2025-04-15)
+### 8. El Fin del Oficio... (2025-04-15)
 - **Categoría:** ENSAYO | **Lectura:** 8 min
 - **Hecho Atómico:** La analogía entre arquitectura y música revela un patrón idéntico de erosión del oficio: el render reemplazó al proyecto como el beat reemplazó a la partitura, y en ambos casos la producción de consumo rápido desplazó la creación con profundidad.
 - **BLUF:** El oficio en arquitectura y en música está siendo reemplazado por el simulacro: imágenes que parecen casas pero no abrigan, canciones que parecen canciones pero no dicen nada. En los márgenes sobreviven quienes todavía componen, todavía huelen el ladrillo húmedo, todavía saben que una obra no se mide en cantidad de 'me gusta'.
 
-### 8. El Render, Esa Primera Mentira Hermosa (2025-03-26)
+### 9. El Render, Esa Primera Mentira Hermosa (2025-03-26)
 - **Categoría:** ENSAYO | **Lectura:** 11 min
 - **Hecho Atómico:** La transición del render tradicional (semanas de modelado, ajuste de materiales y esperas de procesamiento) al render asistido por iA (minutos de iteración conversacional) eliminó la barrera entre ideación y visualización, convirtiendo al anteproyecto en un proceso donde la imagen ya no es el final sino parte del pensamiento.
 - **BLUF:** El render no muestra un edificio: lo sueña, lo exagera, lo suspende en una versión higiénica del mundo. Con la llegada de la iA, el render dejó de ser una producción sagrada para convertirse en parte del flujo del anteproyecto, democratizando la visualización pero obligando a distinguir entre seducción y verdad constructiva.
 
-### 9. La Evolución de la Educación en la Era de la Constante Innovación Tecnológica (2024-10-05)
+### 10. La Evolución de la Educación en la Era de la Constante Innovación Tecnológica (2024-10-05)
 - **Categoría:** ENSAYO | **Lectura:** 7 min
 - **Hecho Atómico:** En siglos anteriores la vida útil de una tecnología profesional abarcaba generaciones enteras; hoy, un arquitecto enfrenta múltiples olas de innovación (CAD, BIM, iA) dentro de una sola carrera, lo que vuelve ineficaz el modelo de llenar el recipiente con información que pronto queda desfasada.
 - **BLUF:** El modelo educativo lineal y estático quedó obsoleto frente al ritmo de innovación tecnológica. La universidad debe transformarse de proveedora de conocimientos técnicos a plataforma que fomente la curiosidad, el pensamiento crítico y la capacidad de aprender a aprender continuamente.

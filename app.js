@@ -2552,35 +2552,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    // 1. Fetch Featured Data
-    if (featuredGrid) {
-        try {
-            const response = await fetch('./data/videos.json');
-            if (!response.ok) throw new Error('Network response was not ok');
-            const rawData = await response.json();
 
-            // Map Spanish keys from SSOT to internal English keys
-            featuredData = rawData.map(v => ({
-                id: v.id,
-                title: v.titulo,
-                date: v.fecha,
-                bluf: v.bluf,
-                atomic_fact: v.hecho_atomico,
-                category: v.categoria,
-                link: v.url,
-                thumbnail: `https://img.youtube.com/vi/${v.id}/maxresdefault.jpg`
-            }));
-
-            renderFeaturedCards(featuredData, featuredGrid);
-        } catch (error) {
-            console.error('Error fetching featured data:', error);
-            featuredGrid.innerHTML = `
-                <div class="col-span-1 md:col-span-3 text-center p-6 glass-card border border-red-500/30 rounded-xl">
-                    <p class="text-red-400 text-sm font-mono">⚠️ No se pudieron cargar los destacados.</p>
-                </div>
-            `;
-        }
-    }
 
     // 2. Fetch Agenda Data (DISABLED - RESIDUAL CONTENT REMOVED)
     /*
@@ -2608,18 +2580,36 @@ document.addEventListener('DOMContentLoaded', async () => {
     ])
         .then(([jsonData, csvText]) => {
             // Map Spanish keys from SSOT to internal English keys
-            const featuredData = jsonData.map(v => ({
-                id: v.id,
-                title: v.titulo,
-                date: v.fecha || 'Reciente',
-                bluf: v.bluf,
-                atomic_fact: v.hecho_atomico,
-                category: v.categoria,
-                link: v.url,
-                type: v.tipo || 'VIDEO',
-                duration: v.duration || '10:00',
-                thumbnail: v.thumbnail || `https://img.youtube.com/vi/${v.id}/maxresdefault.jpg`
-            }));
+            const featuredData = jsonData.map(v => {
+                // Determine category/topic
+                const topic = v.topic || v.categoria || 'ANÁLISIS';
+                
+                // Determine thumbnail
+                let thumbnail = v.thumbnail;
+                if (!thumbnail) {
+                    // Fallback to YouTube if ID looks like a YouTube ID (11 chars)
+                    if (v.id && v.id.length === 11) {
+                        thumbnail = `https://img.youtube.com/vi/${v.id}/maxresdefault.jpg`;
+                    } else {
+                        // Generic fallback
+                        thumbnail = 'assets/memoria/portada_001.webp';
+                    }
+                }
+
+                return {
+                    id: v.id,
+                    title: v.titulo,
+                    date: v.fecha || 'Reciente',
+                    bluf: v.bluf,
+                    atomic_fact: v.hecho_atomico,
+                    category: topic,
+                    topic: topic,
+                    link: v.url,
+                    type: v.tipo || 'VIDEO',
+                    duration: v.duration || (v.tipo === 'ARTÍCULO' ? 'LECTURA' : '10:00'),
+                    thumbnail: thumbnail
+                };
+            });
 
             const allVideos = parseVideoCSV(csvText);
 

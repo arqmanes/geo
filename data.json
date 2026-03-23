@@ -1,5 +1,15 @@
 [
   {
+    "id": "li-criterio-simulacro",
+    "title": "Criterio o simulacro: formar arquitectos en la era de la inteligencia artificial",
+    "thumbnail": "assets/memoria/portada_010.webp",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7439718543815831552/",
+    "atomic_fact": "Este artículo explora la necesidad de preservar el juicio, el criterio y el pensamiento crítico en la enseñanza de la arquitectura frente a la aceleración tecnológica.",
+    "bluf": "La inteligencia artificial no es el origen del problema, sino su acelerador en una universidad que pierde la batalla por la profundidad.",
+    "topic": "CRÍTICA",
+    "date": "2026-03-17"
+  },
+  {
     "id": "kFwWXshd95c",
     "title": "YouTube encuentra demasiado y la iA alucina. Así lo resolví",
     "thumbnail": "https://img.youtube.com/vi/kFwWXshd95c/maxresdefault.jpg",
@@ -12,7 +22,7 @@
   {
     "id": "li-criterio-profesional",
     "title": "La iA no vino a reemplazar tu criterio profesional (vino a ponerlo a prueba)",
-    "thumbnail": "https://img.youtube.com/vi/li-criterio-profesional/maxresdefault.jpg",
+    "thumbnail": "assets/memoria/portada_009.webp",
     "link": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7437244930697138176/",
     "atomic_fact": "Análisis crítico sobre la delegación del juicio profesional en la iA y el riesgo de dependencia técnica.",
     "bluf": "Utilizar la iA para tapar vacíos de conocimiento es un error que degrada la profesión. El verdadero valor aparece cuando vos ya sabés del tema.",

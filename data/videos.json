@@ -1,5 +1,17 @@
 [
     {
+        "id": "li-criterio-simulacro",
+        "tipo": "ARTÍCULO",
+        "titulo": "Criterio o simulacro: formar arquitectos en la era de la inteligencia artificial",
+        "fecha": "2026-03-17",
+        "bluf": "La inteligencia artificial no es el origen del problema, sino su acelerador en una universidad que pierde la batalla por la profundidad.",
+        "hecho_atomico": "Este artículo explora la necesidad de preservar el juicio, el criterio y el pensamiento crítico en la enseñanza de la arquitectura frente a la aceleración tecnológica.",
+        "categoria": "CRÍTICA",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7439718543815831552/",
+        "thumbnail": "assets/memoria/portada_010.webp",
+        "duration": "LECTURA"
+    },
+    {
         "id": "kFwWXshd95c",
         "titulo": "YouTube encuentra demasiado y la iA alucina. Así lo resolví",
         "fecha": "2026-03-10",
