@@ -2501,7 +2501,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function openMemoria(item) {
-        window._openMemoria = openMemoria; // Expose to global scope for inline handlers
         if (!memoriaReader || !memoriaContent || !memoriaList) return;
         const html = simpleMarkdownToHtml(item.contenido_md);
 
@@ -2548,6 +2547,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         memoriaReader.classList.remove('hidden');
         document.getElementById('memoria').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+
+    // Expose openMemoria to global scope immediately after definition
+    window._openMemoria = openMemoria;
 
     if (memoriaClose) {
         memoriaClose.addEventListener('click', () => {
