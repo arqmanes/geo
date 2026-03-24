@@ -2398,6 +2398,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const actividadesRecientesGrid = document.getElementById('actividades-recientes');
     let featuredData = [];
     let agendaData = [];
+    let memoriaData = []; // Global reference so renderFeaturedCards can open articles inline
+    window.memoriaData = memoriaData; // Expose to global scope for inline handlers
 
     // 0. Fetch Activities Data (state computed at runtime from fecha_iso)
     if (actividadesProximasGrid || actividadesRecientesGrid) {
@@ -2442,6 +2444,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             const response = await fetch('./data/memoria.json');
             if (!response.ok) throw new Error('Network response was not ok');
             const memorias = await response.json();
+            memoriaData = memorias; // Store for cross-section use
+            window.memoriaData = memorias; // Expose to global scope
 
             // Sort by date descending
             const sorted = [...memorias].sort((a, b) => b.fecha_iso.localeCompare(a.fecha_iso));
@@ -2497,6 +2501,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function openMemoria(item) {
+        window._openMemoria = openMemoria; // Expose to global scope for inline handlers
         if (!memoriaReader || !memoriaContent || !memoriaList) return;
         const html = simpleMarkdownToHtml(item.contenido_md);
 
@@ -2621,7 +2626,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (featuredGrid) {
                 // Combine explicit featured items with newest from archive, ensuring 9 slots
                 const combinedRecent = [...featuredData, ...allVideos].slice(0, 9);
-                renderFeaturedCards(combinedRecent, featuredGrid);
+                renderFeaturedCards(combinedRecent, featuredGrid, memoriaData);
             }
 
             // 2. Render Technical Table (Total History from CSV)
@@ -2779,7 +2784,7 @@ function renderGeoCards(data, container) {
     });
 }
 
-function renderFeaturedCards(data, container) {
+function renderFeaturedCards(data, container, memorias) {
     container.innerHTML = '';
     data.forEach((card, index) => {
         const item = document.createElement('article');
@@ -2787,16 +2792,34 @@ function renderFeaturedCards(data, container) {
         const visibilityClass = index < 3 ? 'flex' : 'hidden md:flex';
         item.className = `glass-card rounded-xl overflow-hidden group hover:border-neon-green/50 transition-all shadow-2xl flex-col h-full cursor-pointer ${visibilityClass}`;
         item.setAttribute('data-geo-type', 'featured');
-        
+
+        const isArticle = card.type === 'ARTÍCULO';
+
+        // Helper: find matching memoria by title and open inline reader
+        function openArticleInline() {
+            const pool = memorias || window.memoriaData;
+            const match = pool && pool.find(m => m.titulo && m.titulo.trim() === (card.title || '').trim());
+            if (match && window._openMemoria) {
+                window._openMemoria(match);
+                document.getElementById('memoria').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                // Fallback: open external link
+                window.open(card.link, '_blank');
+            }
+        }
+
         // Add click event for the whole card
         item.onclick = (e) => {
-            // Prevent double opening if the user clicks the explicit link button at the bottom
-            if (!e.target.closest('a')) {
-                window.open(card.link, '_blank');
+            // Prevent double opening if the user clicks the explicit link/button at the bottom
+            if (!e.target.closest('a') && !e.target.closest('button')) {
+                if (isArticle) {
+                    openArticleInline();
+                } else {
+                    window.open(card.link, '_blank');
+                }
             }
         };
 
-        const isArticle = card.type === 'ARTÍCULO';
         const actionText = isArticle ? 'Leer Ahora' : 'Ver Ahora';
         const playIcon = `<svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>`;
         const bookIcon = `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18 18.246 18.477 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>`;
@@ -2843,10 +2866,15 @@ function renderFeaturedCards(data, container) {
                         <span class="w-1.5 h-1.5 rounded-full ${isArticle ? 'bg-neon-green shadow-[0_0_5px_rgba(57,255,20,0.6)]' : 'bg-neon-blue shadow-[0_0_5px_#00ffff]'}"></span>
                         ${card.topic || card.category || 'ANÁLISIS'}
                     </span>
+                    ${isArticle ? `
+                    <button onclick="event.stopPropagation(); (function(){ const pool = window.memoriaData; const match = pool && pool.find(m => m.titulo && m.titulo.trim() === '${(card.title || '').replace(/'/g, "&#39;")}'); if(match && window._openMemoria){window._openMemoria(match);document.getElementById('memoria').scrollIntoView({behavior:'smooth',block:'start'});}else{window.open('${card.link}','_blank');}})();" class="text-neon-green hover:text-white transition-colors flex items-center gap-1 group/link hover:underline decoration-neon-green/50 underline-offset-4 bg-transparent border-none cursor-pointer font-bold text-[10px] uppercase tracking-widest">
+                        ${actionText}
+                        <span class="group-hover/link:translate-x-1 transition-transform">→</span>
+                    </button>` : `
                     <a href="${card.link}" target="_blank" class="text-neon-green hover:text-white transition-colors flex items-center gap-1 group/link hover:underline decoration-neon-green/50 underline-offset-4">
                         ${actionText}
                         <span class="group-hover/link:translate-x-1 transition-transform">→</span>
-                    </a>
+                    </a>`}
                 </div>
             </div>
         `;
