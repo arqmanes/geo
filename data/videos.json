@@ -1,5 +1,17 @@
 [
     {
+        "id": "li-delta-humano",
+        "tipo": "ARTÍCULO",
+        "titulo": "Cuando lo aceptable ya no alcanza",
+        "fecha": "2026-03-24",
+        "bluf": "Con muy poco esfuerzo cualquiera llega a un resultado aceptable. Lo aceptable se está convirtiendo en el nuevo cero. El valor empieza después.",
+        "hecho_atomico": "El 'Delta Humano' nombra la diferencia entre lo que la iA entrega por defecto y lo que el profesional puede corregir, mejorar o refutar con criterio propio. Esa distancia define la relevancia profesional.",
+        "categoria": "CRÍTICA",
+        "url": "https://www.linkedin.com/pulse/cuando-lo-aceptable-ya-alcanza-sergio-manes-d3cgf",
+        "thumbnail": "assets/memoria/portada_011.webp",
+        "duration": "LECTURA"
+    },
+    {
         "id": "li-criterio-simulacro",
         "tipo": "ARTÍCULO",
         "titulo": "Criterio o simulacro: formar arquitectos en la era de la inteligencia artificial",
