@@ -1,5 +1,15 @@
 [
   {
+    "id": "li-amenaza-real",
+    "title": "La amenaza real para la arquitectura",
+    "thumbnail": "assets/memoria/portada_012.webp",
+    "link": "https://www.linkedin.com/pulse/la-amenaza-real-para-arquitectura-sergio-manes-drome",
+    "atomic_fact": "La verdadera amenaza para la arquitectura no es la inteligencia artificial, sino la comoditización: la pérdida del valor diferencial cuando la disciplina acepta comunicarse y venderse principalmente como imagen, ignorando las condiciones reales del habitar.",
+    "bluf": "La iA no crea el problema, lo acelera. El riesgo es que la arquitectura se reduzca a un commodity donde se compite por precio y apariencia, no por el entendimiento del clima, la acústica y los rituales cotidianos.",
+    "topic": "CRÍTICA",
+    "date": "2026-04-13"
+  },
+  {
     "id": "li-delta-humano",
     "title": "Cuando lo aceptable ya no alcanza",
     "thumbnail": "assets/memoria/portada_011.webp",
