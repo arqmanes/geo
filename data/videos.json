@@ -1,5 +1,26 @@
 [
     {
+        "id": "3qJ4ELRGdv8",
+        "titulo": "La TRAMPA que estudiantes y docentes de ARQUITECTURA ya no pueden seguir ignorando",
+        "fecha": "2026-04-13",
+        "bluf": "La verdadera trampa en la educación arquitectónica no es usar iA, sino confundir la fluidez visual y operativa con comprensión intelectual y capacidad de resolver problemas reales.",
+        "hecho_atomico": "Crítica al modelo educativo actual en arquitectura, donde la inmediatez y las herramientas generativas facilitan un 'simulacro de solvencia' visual que enmascara la falta de criterio propio frente al diseño.",
+        "categoria": "CRÍTICA",
+        "url": "https://www.youtube.com/watch?v=3qJ4ELRGdv8"
+    },
+    {
+        "id": "li-amenaza-real",
+        "tipo": "ARTÍCULO",
+        "titulo": "La amenaza real para la arquitectura",
+        "fecha": "2026-04-13",
+        "bluf": "La iA no crea el problema, lo acelera. El riesgo es que la arquitectura se reduzca a un commodity donde se compite por precio y apariencia, no por el entendimiento del clima, la acústica y los rituales cotidianos.",
+        "hecho_atomico": "La verdadera amenaza para la arquitectura no es la inteligencia artificial, sino la comoditización: la pérdida del valor diferencial cuando la disciplina acepta comunicarse y venderse principalmente como imagen, ignorando las condiciones reales del habitar.",
+        "categoria": "CRÍTICA",
+        "url": "https://www.linkedin.com/pulse/la-amenaza-real-para-arquitectura-sergio-manes-drome",
+        "thumbnail": "assets/memoria/portada_012.webp",
+        "duration": "LECTURA"
+    },
+    {
         "id": "li-delta-humano",
         "tipo": "ARTÍCULO",
         "titulo": "Cuando lo aceptable ya no alcanza",
