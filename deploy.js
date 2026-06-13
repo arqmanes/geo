@@ -11,7 +11,14 @@ const EXCLUDES = [
     'deploy.js',
     'package.json',
     'package-lock.json',
-    '.gitignore'
+    '.gitignore',
+    'transcript_es.txt',
+    'transcript.json',
+    'transcript_utf8.json',
+    'yt-info.json',
+    'Videos youtube.csv',
+    'Videos youtube.xlsx',
+    'llms.txt'
 ];
 
 async function deploy() {

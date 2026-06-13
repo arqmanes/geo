@@ -2404,7 +2404,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 0. Fetch Activities Data (state computed at runtime from fecha_iso)
     if (actividadesProximasGrid || actividadesRecientesGrid) {
         try {
-            const response = await fetch('./data/actividad.json');
+            const response = await fetch(`./data/actividad.json?v=${Date.now()}`);
             if (!response.ok) throw new Error('Network response was not ok');
             const actividades = await response.json();
 
@@ -2441,7 +2441,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (memoriaList) {
         try {
-            const response = await fetch('./data/memoria.json');
+            const response = await fetch(`./data/memoria.json?v=${Date.now()}`);
             if (!response.ok) throw new Error('Network response was not ok');
             const memorias = await response.json();
             memoriaData = memorias; // Store for cross-section use
@@ -2582,7 +2582,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // 2. Fetch all data sources
     Promise.all([
-        fetch('./data/videos.json').then(res => res.json()),
+        fetch(`./data/videos.json?v=${Date.now()}`).then(res => res.json()),
         fetch('./Videos youtube.csv').then(res => res.text())
     ])
         .then(([jsonData, csvText]) => {

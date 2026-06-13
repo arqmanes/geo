@@ -1,5 +1,38 @@
 [
     {
+        "id": "li-flecha-indio",
+        "tipo": "ARTÍCULO",
+        "titulo": "No es la flecha… (es el indio)",
+        "fecha": "2026-06-10",
+        "bluf": "Cuando todos los indios tienen la misma flecha, lo único que diferencia a uno del otro es quien la dispara. Con el costo de producción visual tendiendo a cero por la IA, el pensamiento arquitectónico y el juicio se convierten en la verdadera ventaja profesional.",
+        "hecho_atomico": "La inteligencia artificial generativa democratiza la representación visual en arquitectura, trasladando el valor diferencial del dominio de la herramienta (la flecha) al criterio, juicio y pensamiento arquitectónico de quien la dirige (el indio).",
+        "categoria": "OPINIÓN",
+        "url": "https://www.linkedin.com/pulse/es-la-flecha-el-indio-sergio-manes-1tb6f/",
+        "thumbnail": "assets/memoria/portada_014.webp",
+        "duration": "LECTURA"
+    },
+    {
+        "id": "li-universidad-obsoleta",
+        "tipo": "ARTÍCULO",
+        "titulo": "La universidad sigue formando arquitectos para un mundo que ya no existe",
+        "fecha": "2026-04-27",
+        "bluf": "El problema de la educación arquitectónica actual no es la falta de nuevas herramientas, sino la fragmentación del conocimiento. La universidad debe dejar de acumular temas y empezar a formar criterio.",
+        "hecho_atomico": "Crítica a la estructura formativa universitaria en arquitectura, argumentando que la acumulación de contenidos desarticulados genera dispersión en lugar de amplitud. Se expone la necesidad de pasar de una enseñanza fragmentada a una que construya criterio profesional para intervenir en problemas reales.",
+        "categoria": "OPINIÓN",
+        "url": "https://www.linkedin.com/pulse/la-universidad-sigue-formando-arquitectos-para-un-mundo-sergio-manes-fnm3e/",
+        "thumbnail": "assets/memoria/portada_013.webp",
+        "duration": "LECTURA"
+    },
+    {
+        "id": "kZtn8Sm92uc",
+        "titulo": "La arquitectura se está suicidando (y nadie lo está diciendo)",
+        "fecha": "2026-04-21",
+        "bluf": "La inteligencia artificial no es la amenaza que destruirá la arquitectura, sino el síntoma de una profesión que se suicida al reducirse a la producción de imágenes seductoras, olvidando que su diferencial consiste en articular vida, materia y tiempo.",
+        "hecho_atomico": "Diagnóstico sobre la comoditización del diseño arquitectónico contemporáneo. Se advierte que la crisis de valor profesional precede a la inteligencia artificial, originándose cuando la disciplina confundió el proyecto habitacional, estructural y de mantenimiento ('habitar, construir, gestionar') con el mero consumo superficial de apariencia visual.",
+        "categoria": "DIÁGNOSTICO",
+        "url": "https://www.youtube.com/watch?v=kZtn8Sm92uc"
+    },
+    {
         "id": "3qJ4ELRGdv8",
         "titulo": "La TRAMPA que estudiantes y docentes de ARQUITECTURA ya no pueden seguir ignorando",
         "fecha": "2026-04-13",
