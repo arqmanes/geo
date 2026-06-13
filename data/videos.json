@@ -12,6 +12,15 @@
         "duration": "LECTURA"
     },
     {
+        "id": "N2N9lAvP6ic",
+        "titulo": "Te formaron para un mundo que ya no existe",
+        "fecha": "2026-04-29",
+        "bluf": "La crisis de la educación arquitectónica no es solo tecnológica, sino pedagógica. Si un egresado no sabe resolver, coordinar ni verificar, la universidad falló al formarlo para un entorno profesional y una velocidad que ya no existen.",
+        "hecho_atomico": "Crítica a la formación universitaria en arquitectura por no preparar a los estudiantes en competencias reales de resolución y gestión técnica, perpetuando un modelo lento y generalista desfasado de la realidad actual.",
+        "categoria": "CRÍTICA",
+        "url": "https://www.youtube.com/watch?v=N2N9lAvP6ic"
+    },
+    {
         "id": "li-universidad-obsoleta",
         "tipo": "ARTÍCULO",
         "titulo": "La universidad sigue formando arquitectos para un mundo que ya no existe",
